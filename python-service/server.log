@@ -1,0 +1,121 @@
+2025-04-04 18:34:52,786 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-04 18:34:52,788 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-04 18:34:52,803 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-04 18:34:52,803 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 18:35:03,005 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:35:03] "GET /ping HTTP/1.1" 200 -
+2025-04-04 18:35:03,009 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:35:03] "GET /health HTTP/1.1" 200 -
+2025-04-04 18:35:16,530 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:35:16] "GET /ping HTTP/1.1" 200 -
+2025-04-04 18:35:16,532 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:35:16] "GET /health HTTP/1.1" 200 -
+2025-04-04 18:35:22,725 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:35:22] "POST /predict HTTP/1.1" 200 -
+2025-04-04 18:35:59,539 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:35:59] "POST /predict HTTP/1.1" 200 -
+2025-04-04 18:36:16,108 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:36:16] "GET /ping HTTP/1.1" 200 -
+2025-04-04 18:36:16,113 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 18:36:16] "GET /health HTTP/1.1" 200 -
+2025-04-04 19:22:48,167 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-04 19:22:48,169 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-04 19:22:48,187 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-04 19:22:48,187 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-04 19:23:04,476 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:23:04] "GET /ping HTTP/1.1" 200 -
+2025-04-04 19:23:04,479 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:23:04] "GET /health HTTP/1.1" 200 -
+2025-04-04 19:23:08,583 - werkzeug - INFO - 127.0.0.1 - - [04/Apr/2025 19:23:08] "POST /predict HTTP/1.1" 200 -
+2025-04-05 09:03:17,832 - werkzeug - INFO - 127.0.0.1 - - [05/Apr/2025 09:03:17] "GET /ping HTTP/1.1" 200 -
+2025-04-05 09:03:17,838 - werkzeug - INFO - 127.0.0.1 - - [05/Apr/2025 09:03:17] "GET /health HTTP/1.1" 200 -
+2025-04-05 09:03:29,466 - werkzeug - INFO - 127.0.0.1 - - [05/Apr/2025 09:03:29] "POST /predict HTTP/1.1" 200 -
+2025-04-05 09:54:05,478 - werkzeug - INFO - 127.0.0.1 - - [05/Apr/2025 09:54:05] "POST /predict HTTP/1.1" 200 -
+2025-04-06 00:53:30,026 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-06 00:53:30,030 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-06 00:53:30,055 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.35:5000
+2025-04-06 00:53:30,056 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-06 00:53:38,730 - werkzeug - INFO - 127.0.0.1 - - [06/Apr/2025 00:53:38] "GET /ping HTTP/1.1" 200 -
+2025-04-06 00:53:38,732 - werkzeug - INFO - 127.0.0.1 - - [06/Apr/2025 00:53:38] "GET /health HTTP/1.1" 200 -
+2025-04-06 00:54:01,480 - werkzeug - INFO - 127.0.0.1 - - [06/Apr/2025 00:54:01] "GET /ping HTTP/1.1" 200 -
+2025-04-06 00:54:01,484 - werkzeug - INFO - 127.0.0.1 - - [06/Apr/2025 00:54:01] "GET /health HTTP/1.1" 200 -
+2025-04-06 00:54:27,130 - werkzeug - INFO - 127.0.0.1 - - [06/Apr/2025 00:54:27] "POST /predict HTTP/1.1" 200 -
+2025-04-07 12:20:58,168 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-07 12:20:58,172 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-07 12:20:58,200 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-07 12:20:58,200 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 12:21:22,052 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 12:21:22] "[33mGET / HTTP/1.1[0m" 404 -
+2025-04-07 12:21:22,221 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 12:21:22] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-07 12:21:31,264 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 12:21:31] "GET /ping HTTP/1.1" 200 -
+2025-04-07 12:21:31,272 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 12:21:31] "GET /health HTTP/1.1" 200 -
+2025-04-07 12:58:57,880 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-07 12:58:57,884 - terminal-model-server - WARNING - No model found at model/ensemble_command_model.pkl. Training a new ensemble model...
+2025-04-07 12:58:58,482 - terminal-model-server - ERROR - Error training model: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2 3], got ['df_-h' 'find_.,-name,*.log' 'grep_-r,pattern,.' 'ls_-la']
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/custom-terminal/python-service/service.py", line 323, in <module>
+    accuracies = trainer.train(DATA_PATH, MODEL_PATH)
+  File "/home/jayaprakash/Projects/Personal/custom-terminal/python-service/command_model.py", line 141, in train
+    model.fit(X_train_tfidf, y_train)
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/xgboost/core.py", line 730, in inner_f
+    return func(**kwargs)
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/xgboost/sklearn.py", line 1471, in fit
+    raise ValueError(
+ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2 3], got ['df_-h' 'find_.,-name,*.log' 'grep_-r,pattern,.' 'ls_-la']
+2025-04-07 12:58:58,494 - terminal-model-server - WARNING - You will need to train a model using the /train endpoint before using predictions
+2025-04-07 12:58:58,495 - terminal-model-server - INFO - Starting terminal model server with ensemble model on port 5000
+2025-04-07 12:58:58,539 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-07 12:58:58,540 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 12:59:23,780 - terminal-model-server - ERROR - Error making prediction: Ensemble model not trained or loaded
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/custom-terminal/python-service/service.py", line 145, in predict
+    result = trainer.predict(query, MAPPING_PATH)
+  File "/home/jayaprakash/Projects/Personal/custom-terminal/python-service/command_model.py", line 228, in predict
+    raise ValueError("Ensemble model not trained or loaded")
+ValueError: Ensemble model not trained or loaded
+2025-04-07 12:59:23,785 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 12:59:23] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-04-07 13:01:08,265 - terminal-model-server - INFO - Training ensemble model on dataset: data/command_dataset.json
+2025-04-07 13:01:08,714 - terminal-model-server - ERROR - Error training model: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2 3], got ['df_-h' 'find_.,-name,*.log' 'grep_-r,pattern,.' 'ls_-la']
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/custom-terminal/python-service/service.py", line 199, in train_model
+    accuracies = trainer.train(dataset_path, MODEL_PATH)
+  File "/home/jayaprakash/Projects/Personal/custom-terminal/python-service/command_model.py", line 141, in train
+    model.fit(X_train_tfidf, y_train)
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/xgboost/core.py", line 730, in inner_f
+    return func(**kwargs)
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/xgboost/sklearn.py", line 1471, in fit
+    raise ValueError(
+ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1 2 3], got ['df_-h' 'find_.,-name,*.log' 'grep_-r,pattern,.' 'ls_-la']
+2025-04-07 13:01:08,717 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 13:01:08] "[35m[1mPOST /train HTTP/1.1[0m" 500 -
+2025-04-07 13:06:19,902 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-07 13:06:19,906 - terminal-model-server - WARNING - No model found at model/ensemble_command_model.pkl. Training a new ensemble model...
+2025-04-07 13:06:19,919 - command_model - INFO - Training svc with TF-IDF...
+2025-04-07 13:06:19,931 - command_model - INFO - Training rf with TF-IDF...
+2025-04-07 13:06:20,156 - command_model - INFO - Training mlp with TF-IDF...
+2025-04-07 13:06:20,405 - command_model - INFO - Training xgb with TF-IDF...
+2025-04-07 13:06:20,651 - terminal-model-server - INFO - Ensemble model training completed with best accuracy: 0.0000
+2025-04-07 13:06:20,679 - terminal-model-server - INFO - Starting terminal model server with ensemble model on port 5000
+2025-04-07 13:06:20,701 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-07 13:06:20,701 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-07 13:06:46,503 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 13:06:46] "GET /ping HTTP/1.1" 200 -
+2025-04-07 13:06:46,534 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 13:06:46] "GET /health HTTP/1.1" 200 -
+2025-04-07 13:06:58,812 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 13:06:58] "POST /predict HTTP/1.1" 200 -
+2025-04-07 13:07:11,467 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 13:07:11] "POST /predict HTTP/1.1" 200 -
+2025-04-07 13:07:20,649 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 13:07:20] "POST /predict HTTP/1.1" 200 -
+2025-04-07 13:07:51,768 - werkzeug - INFO - 127.0.0.1 - - [07/Apr/2025 13:07:51] "POST /predict HTTP/1.1" 200 -
+2025-04-09 20:29:33,529 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-09 20:29:33,536 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-09 20:29:33,590 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-09 20:29:33,590 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-09 20:29:52,059 - werkzeug - INFO - 127.0.0.1 - - [09/Apr/2025 20:29:52] "GET /ping HTTP/1.1" 200 -
+2025-04-09 20:29:52,068 - werkzeug - INFO - 127.0.0.1 - - [09/Apr/2025 20:29:52] "GET /health HTTP/1.1" 200 -

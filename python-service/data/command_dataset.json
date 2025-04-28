@@ -1,0 +1,32 @@
+[
+    {
+      "command": "ls",
+      "args": ["-la"],
+      "natural_language": "Show all files in the current directory including hidden ones",
+      "explanation": "Lists all files (-a) in long format (-l)"
+    },
+    {
+      "command": "ps",
+      "args": ["aux"],
+      "natural_language": "Show all running processes",
+      "explanation": "Displays all running processes with user and system info"
+    },
+    {
+      "command": "grep",
+      "args": ["-r", "pattern", "."],
+      "natural_language": "Find text in files",
+      "explanation": "Searches recursively (-r) for 'pattern' in current directory (.)"
+    },
+    {
+      "command": "find",
+      "args": [".", "-name", "*.log"],
+      "natural_language": "Find all log files",
+      "explanation": "Searches for files with .log extension in current directory"
+    },
+    {
+      "command": "df",
+      "args": ["-h"],
+      "natural_language": "Show disk space",
+      "explanation": "Shows disk space usage in human-readable format (-h)"
+    }
+  ]
