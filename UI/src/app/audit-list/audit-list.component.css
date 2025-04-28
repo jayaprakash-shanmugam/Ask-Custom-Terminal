@@ -1,0 +1,78 @@
+.audit-list-container {
+    padding: 16px;
+    
+    h1 {
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+  }
+  
+  .filter-card {
+    margin-bottom: 24px;
+  }
+  
+  .filter-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .filter-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 16px;
+  }
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .table-container {
+    position: relative;
+    overflow: auto;
+    border-radius: 4px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .audit-row {
+    cursor: pointer;
+    
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+  
+  .no-data {
+    padding: 24px;
+    text-align: center;
+    font-style: italic;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-form {
+      grid-template-columns: 1fr;
+    }
+    
+    .filter-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }

@@ -1,0 +1,169 @@
+<div class="stats-container">
+    <header class="stats-header">
+      <h1>Audit Statistics</h1>
+      <div class="header-actions">
+        <button mat-raised-button color="primary" (click)="refreshStats()">
+          <mat-icon>refresh</mat-icon>
+          Refresh
+        </button>
+        <button mat-raised-button color="accent" (click)="exportCSV()">
+          <mat-icon>download</mat-icon>
+          Export CSV
+        </button>
+      </div>
+    </header>
+  
+    <div *ngIf="loading" class="loading-container">
+      <mat-spinner></mat-spinner>
+      <p>Loading statistics...</p>
+    </div>
+  
+    <div *ngIf="error" class="error-container">
+      <mat-icon color="warn">error</mat-icon>
+      <p>{{ error }}</p>
+      <button mat-button color="primary" (click)="loadStats()">Try Again</button>
+    </div>
+  
+    <div *ngIf="!loading && !error" class="stats-content">
+      <!-- Summary Cards -->
+      <div class="stats-summary">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Total Events</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="summary-value">{{ clientTotal + modelTotal | number }}</div>
+          </mat-card-content>
+        </mat-card>
+  
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Client Events</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="summary-value">{{ clientTotal | number }}</div>
+            <div class="summary-percentage">
+              {{ clientTotal / (clientTotal + modelTotal) * 100 | number:'1.0-1' }}%
+            </div>
+          </mat-card-content>
+        </mat-card>
+  
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Model Events</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="summary-value">{{ modelTotal | number }}</div>
+            <div class="summary-percentage">
+              {{ modelTotal / (clientTotal + modelTotal) * 100 | number:'1.0-1' }}%
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+  
+      <!-- Charts Grid -->
+      <div class="charts-grid">
+        <!-- Client vs Model Chart -->
+        <mat-card class="chart-card">
+          <mat-card-header>
+            <mat-card-title>Client vs Model Events</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <canvas baseChart
+              [data]="sourceComparisonChart.data"
+              [options]="sourceComparisonChart.options"
+              [type]="sourceComparisonChart.type">
+            </canvas>
+          </mat-card-content>
+        </mat-card>
+  
+        <!-- Event Types Distribution Chart -->
+        <mat-card class="chart-card">
+          <mat-card-header>
+            <mat-card-title>Event Types Distribution</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <canvas baseChart
+              [data]="eventTypeChart.data"
+              [options]="eventTypeChart.options"
+              [type]="eventTypeChart.type">
+            </canvas>
+          </mat-card-content>
+        </mat-card>
+  
+        <!-- Timeline Chart -->
+        <mat-card class="chart-card wide">
+          <mat-card-header>
+            <mat-card-title>Events Timeline</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <canvas baseChart
+              [data]="timelineChart.data"
+              [options]="timelineChart.options"
+              [type]="timelineChart.type">
+            </canvas>
+          </mat-card-content>
+        </mat-card>
+  
+        <!-- Top Models Chart -->
+        <mat-card class="chart-card">
+          <mat-card-header>
+            <mat-card-title>Top Models by Usage</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <canvas baseChart
+              [data]="topModelsChart.data"
+              [options]="topModelsChart.options"
+              [type]="topModelsChart.type">
+            </canvas>
+          </mat-card-content>
+        </mat-card>
+      </div>
+  
+      <!-- Detailed Stats Table -->
+      <mat-card class="stats-table-card">
+        <mat-card-header>
+          <mat-card-title>Event Type Details</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <table mat-table [dataSource]="combinedStats" class="mat-elevation-z2">
+            <!-- Event Type Column -->
+            <ng-container matColumnDef="eventType">
+              <th mat-header-cell *matHeaderCellDef>Event Type</th>
+              <td mat-cell *matCellDef="let stat">{{ stat._id }}</td>
+            </ng-container>
+  
+            <!-- Client Count Column -->
+            <ng-container matColumnDef="clientCount">
+              <th mat-header-cell *matHeaderCellDef>Client Count</th>
+              <td mat-cell *matCellDef="let stat">
+                {{ getClientCount(stat._id) | number }}
+              </td>
+            </ng-container>
+  
+            <!-- Model Count Column -->
+            <ng-container matColumnDef="modelCount">
+              <th mat-header-cell *matHeaderCellDef>Model Count</th>
+              <td mat-cell *matCellDef="let stat">
+                {{ getModelCount(stat._id) | number }}
+              </td>
+            </ng-container>
+  
+            <!-- Total & Percentage Column -->
+            <ng-container matColumnDef="total">
+              <th mat-header-cell *matHeaderCellDef>Total</th>
+              <td mat-cell *matCellDef="let stat">
+                {{ getTotalCount(stat._id) | number }}
+                <span class="percentage">
+                  ({{ getEventTypePercentage(stat._id) }}%)
+                </span>
+              </td>
+            </ng-container>
+  
+            <tr mat-header-row *matHeaderRowDef="['eventType', 'clientCount', 'modelCount', 'total']"></tr>
+            <tr mat-row *matRowDef="let row; columns: ['eventType', 'clientCount', 'modelCount', 'total']"></tr>
+          </table>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

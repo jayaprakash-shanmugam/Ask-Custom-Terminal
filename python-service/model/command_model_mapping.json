@@ -1,0 +1,41 @@
+{
+  "ls_-la": {
+    "command": "ls",
+    "args": [
+      "-la"
+    ],
+    "explanation": "Lists all files (-a) in long format (-l)"
+  },
+  "ps_aux": {
+    "command": "ps",
+    "args": [
+      "aux"
+    ],
+    "explanation": "Displays all running processes with user and system info"
+  },
+  "grep_-r,pattern,.": {
+    "command": "grep",
+    "args": [
+      "-r",
+      "pattern",
+      "."
+    ],
+    "explanation": "Searches recursively (-r) for 'pattern' in current directory (.)"
+  },
+  "find_.,-name,*.log": {
+    "command": "find",
+    "args": [
+      ".",
+      "-name",
+      "*.log"
+    ],
+    "explanation": "Searches for files with .log extension in current directory"
+  },
+  "df_-h": {
+    "command": "df",
+    "args": [
+      "-h"
+    ],
+    "explanation": "Shows disk space usage in human-readable format (-h)"
+  }
+}

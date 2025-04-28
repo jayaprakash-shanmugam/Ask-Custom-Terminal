@@ -1,0 +1,144 @@
+.session-view-container {
+    padding: 16px;
+    
+    h1 {
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    h2 {
+      margin-bottom: 24px;
+      font-weight: 400;
+      font-size: 16px;
+      color: #666;
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  .header-actions {
+    margin-bottom: 16px;
+  }
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .timeline-container {
+    padding: 16px 0;
+  }
+  
+  .session-timeline {
+    position: relative;
+    padding-left: 32px;
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: #e0e0e0;
+    }
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 32px;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .timeline-marker {
+    position: absolute;
+    left: -32px;
+    top: 24px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    
+    &.client {
+      background-color: #3f51b5;
+    }
+    
+    &.model {
+      background-color: #f44336;
+    }
+  }
+  
+  .timeline-content {
+    position: relative;
+  }
+  
+  .timeline-card {
+    cursor: pointer;
+    transition: box-shadow 0.3s;
+    
+    &:hover {
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.12);
+    }
+  }
+  
+  .client-avatar, .model-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    
+    mat-icon {
+      font-size: 20px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
+  .client-avatar {
+    background-color: #3f51b5;
+  }
+  
+  .model-avatar {
+    background-color: #f44336;
+  }
+  
+  .no-events {
+    text-align: center;
+    padding: 48px;
+    color: #666;
+    font-style: italic;
+  }
+  
+  @media (max-width: 768px) {
+    .session-timeline {
+      padding-left: 24px;
+      
+      &:before {
+        left: 11px;
+      }
+    }
+    
+    .timeline-marker {
+      left: -24px;
+      width: 16px;
+      height: 16px;
+    }
+  }

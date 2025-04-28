@@ -1,0 +1,81 @@
+.audit-detail-container {
+    padding: 16px;
+    
+    h1 {
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+  }
+  
+  .header-actions {
+    margin-bottom: 16px;
+  }
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .detail-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  .detail-row {
+    display: flex;
+    margin-bottom: 16px;
+    
+    .label {
+      font-weight: 500;
+      width: 120px;
+      flex-shrink: 0;
+    }
+    
+    .value {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      
+      button {
+        margin-left: 8px;
+      }
+    }
+    
+    .json-content {
+      overflow-x: auto;
+      max-width: 100%;
+      
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        word-break: break-word;
+        background-color: #f5f5f5;
+        padding: 8px;
+        border-radius: 4px;
+      }
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .detail-row {
+      flex-direction: column;
+      
+      .label {
+        width: 100%;
+        margin-bottom: 4px;
+      }
+    }
+  }

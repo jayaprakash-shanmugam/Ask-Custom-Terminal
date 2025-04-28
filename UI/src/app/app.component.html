@@ -1,0 +1,119 @@
+<mat-sidenav-container class="sidenav-container">
+  <!-- Sidenav -->
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    
+    <!-- Sidenav Header -->
+    <div class="sidenav-header">
+      <!-- <img src="/UI/src/AS.png" alt="Logo" class="logo"> -->
+      <h2 class="app-name">Audit Portal</h2>
+    </div>
+    
+    <!--  Navigation Links -->
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link" (click)="closeNavOnMobile()">
+        <mat-icon>dashboard</mat-icon>
+        <span class="nav-label">Dashboard</span>
+      </a>
+      <a mat-list-item routerLink="/clients" routerLinkActive="active-link" (click)="closeNavOnMobile()">
+        <mat-icon>laptop</mat-icon>
+        <span class="nav-label">Client Audits</span>
+      </a>
+      <a mat-list-item routerLink="/models" routerLinkActive="active-link" (click)="closeNavOnMobile()">
+        <mat-icon>memory</mat-icon>
+        <span class="nav-label">Model Audits</span>
+      </a>
+      <a mat-list-item routerLink="/stats" routerLinkActive="active-link" (click)="closeNavOnMobile()">
+        <mat-icon>bar_chart</mat-icon>
+        <span class="nav-label">Statistics</span>
+      </a>
+      
+      <!-- Additional Navigation Items -->
+      <mat-divider></mat-divider>
+      <a mat-list-item routerLink="/settings" routerLinkActive="active-link" (click)="closeNavOnMobile()">
+        <mat-icon>settings</mat-icon>
+        <span class="nav-label">Settings</span>
+      </a>
+      <a mat-list-item routerLink="/help" routerLinkActive="active-link" (click)="closeNavOnMobile()">
+        <mat-icon>help</mat-icon>
+        <span class="nav-label">Help & Support</span>
+      </a>
+    </mat-nav-list>
+    
+    <!-- User Info Section -->
+    <div class="user-info">
+      <mat-icon>account_circle</mat-icon>
+      <div class="user-details">
+        <span class="user-name">JP</span>
+        <span class="user-role">Owner</span>
+      </div>
+    </div>
+  </mat-sidenav>
+  
+  <!-- Main Content -->
+  <mat-sidenav-content>
+    <!-- Toolbar -->
+    <mat-toolbar color="primary" class="main-toolbar">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      
+      <span class="toolbar-title">{{title}}</span>
+      
+      <!-- Toolbar Actions -->
+      <div class="toolbar-spacer"></div>
+      
+      <button mat-icon-button aria-label="Search">
+        <mat-icon>search</mat-icon>
+      </button>
+      
+      <button mat-icon-button aria-label="Notifications" [matBadge]="notificationCount" 
+              [matBadgeHidden]="notificationCount === 0" matBadgeColor="accent">
+        <mat-icon>notifications</mat-icon>
+      </button>
+      
+      <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="User menu">
+        <mat-icon>account_circle</mat-icon>
+      </button>
+      
+      <mat-menu #userMenu="matMenu">
+        <button mat-menu-item routerLink="/profile">
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar>
+    
+    <!-- Page Content -->
+    <div class="content-container">
+      <!-- <div class="breadcrumb">
+        <span *ngFor="let item of breadcrumbs; let last = last">
+          <a *ngIf="!last" [routerLink]="item.url">{{item.label}}</a>
+          <span *ngIf="!last"> / </span>
+          <span *ngIf="last" class="current-page">{{item.label}}</span>
+        </span>
+      </div> -->
+      
+      <div class="page-content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div>&copy; 2025 Audit Portal. All rights reserved.</div>
+      <div>Version 2.3.1</div>
+    </footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

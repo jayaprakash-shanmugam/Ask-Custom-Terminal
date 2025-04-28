@@ -1,0 +1,78 @@
+<div class="audit-detail-container">
+    <div class="header-actions">
+      <button mat-button (click)="goBack()">
+        <mat-icon>arrow_back</mat-icon> Back to List
+      </button>
+    </div>
+  
+    <h1>{{auditType === 'client' ? 'Client' : 'Model'}} Audit Details</h1>
+  
+    <!-- Loading Spinner -->
+    <div *ngIf="loading" class="loading-spinner">
+      <mat-spinner diameter="40"></mat-spinner>
+    </div>
+  
+    <!-- Error Message -->
+    <div *ngIf="error" class="error-message">
+      {{error}}
+      <button mat-raised-button color="primary" (click)="loadAuditDetails()">Retry</button>
+    </div>
+  
+    <!-- Audit Details -->
+    <div *ngIf="!loading && !error && audit" class="detail-content">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Basic Information</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="detail-row">
+            <div class="label">ID:</div>
+            <div class="value">
+              {{audit._id}}
+              <button mat-icon-button (click)="copyToClipboard(audit._id || '')" matTooltip="Copy ID">
+                <mat-icon>content_copy</mat-icon>
+              </button>
+            </div>
+          </div>
+          <div class="detail-row">
+            <div class="label">Event Type:</div>
+            <div class="value">{{audit.event_type}}</div>
+          </div>
+          <div class="detail-row">
+            <div class="label">Message:</div>
+            <div class="value">{{audit.message}}</div>
+          </div>
+          <div class="detail-row">
+            <div class="label">Timestamp:</div>
+            <div class="value">{{formatTimestamp(audit.timestamp)}}</div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+  
+      <mat-card *ngIf="metadataKeys.length > 0">
+        <mat-card-header>
+          <mat-card-title>Metadata</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngFor="let key of metadataKeys" class="detail-row">
+            <div class="label">{{key}}:</div>
+            <div class="value" [ngClass]="{'json-content': isJson(getMetadataValue(audit.metadata, key))}">
+              <ng-container *ngIf="key === 'session_id'">
+                {{audit.metadata[key]}}
+                <button mat-icon-button (click)="viewSession(audit.metadata[key])" matTooltip="View Session">
+                  <mat-icon>link</mat-icon>
+                </button>
+                <button mat-icon-button (click)="copyToClipboard(audit.metadata[key])" matTooltip="Copy Session ID">
+                  <mat-icon>content_copy</mat-icon>
+                </button>
+              </ng-container>
+              <ng-container *ngIf="key !== 'session_id'">
+                <pre *ngIf="isJson(getMetadataValue(audit.metadata, key))">{{formatJson(getMetadataValue(audit.metadata, key))}}</pre>
+                <span *ngIf="!isJson(getMetadataValue(audit.metadata, key))">{{getMetadataValue(audit.metadata, key)}}</span>
+              </ng-container>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>

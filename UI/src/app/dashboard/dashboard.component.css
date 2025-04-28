@@ -1,0 +1,111 @@
+.dashboard-container {
+    padding: 16px;
+    
+    h1 {
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+  }
+  
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    padding: 48px;
+  }
+  
+  .error-message {
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+    
+    .stat-number {
+      font-size: 40px;
+      font-weight: 500;
+      color: #3f51b5;
+      text-align: center;
+      padding: 24px 0;
+    }
+    
+    .stat-text {
+      font-size: 18px;
+      text-align: center;
+      padding: 32px 0;
+      color: #555;
+    }
+    
+    mat-card-actions {
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .recent-audits-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 16px;
+    
+    .recent-audits-card {
+      height: 100%;
+    }
+  }
+  
+  .audit-list-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+    .event-type {
+      font-weight: 500;
+      min-width: 100px;
+      margin-right: 16px;
+    }
+    
+    .message {
+      flex: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-right: 16px;
+    }
+    
+    .timestamp {
+      color: #666;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  }
+  
+  .no-data {
+    padding: 16px;
+    font-style: italic;
+    color: #666;
+    text-align: center;
+  }
+  
+  @media (max-width: 768px) {
+    .recent-audits-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .audit-list-item {
+      flex-direction: column;
+      align-items: flex-start;
+      
+      .event-type, .message {
+        margin-right: 0;
+        margin-bottom: 4px;
+      }
+    }
+  }
