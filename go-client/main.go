@@ -1,7 +1,6 @@
 package main
 
 import (
-	"bufio"
 	"bytes"
 	"context"
 	"encoding/json"
@@ -16,6 +15,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/chzyer/readline"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
@@ -34,12 +34,13 @@ type Configuration struct {
 
 // CommandResponse represents the structure of the prediction response
 type CommandResponse struct {
-	Command     string   `json:"command"`
-	Args        []string `json:"args"`
-	Explanation string   `json:"explanation"`
-	Confidence  float64  `json:"confidence"`
-	RequestID   string   `json:"request_id"`
-	Error       string   `json:"error,omitempty"`
+	Command             string   `json:"command"`
+	Args                []string `json:"args"`
+	Explanation         string   `json:"explanation"`
+	Confidence          float64  `json:"confidence"`
+	RequestID           string   `json:"request_id"`
+	Error               string   `json:"error,omitempty"`
+	NextWordSuggestions []string `json:"next_word_suggestions,omitempty"`
 }
 
 // CommandRequest represents the request payload
@@ -62,6 +63,8 @@ var mongoClient *mongo.Client
 var auditCollection *mongo.Collection
 var sessionStartTime time.Time
 var cmdHistory []string
+
+type DynamicCompleter struct{}
 
 const (
 	ColorReset  = "\033[0m"
@@ -303,6 +306,64 @@ func predictCommand(query string) (*CommandResponse, error) {
 	return &result, nil
 }
 
+func predictNextWord(query string) (*CommandResponse, error) {
+	// Create request payload
+	reqPayload := CommandRequest{
+		Query:     query,
+		ClientID:  config.ClientID,
+		SessionID: config.SessionID,
+	}
+
+	jsonData, err := json.Marshal(reqPayload)
+	if err != nil {
+		return nil, fmt.Errorf("failed to marshal request: %v", err)
+	}
+
+	// Set timeout context
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+	defer cancel()
+
+	// Create request
+	req, err := http.NewRequestWithContext(
+		ctx,
+		"POST",
+		fmt.Sprintf("%s/predictNextWord", config.ServerURL),
+		bytes.NewBuffer(jsonData),
+	)
+	if err != nil {
+		return nil, fmt.Errorf("failed to create request: %v", err)
+	}
+
+	// Set headers
+	req.Header.Set("Content-Type", "application/json")
+
+	// Send request
+	resp, err := http.DefaultClient.Do(req)
+	if err != nil {
+		return nil, fmt.Errorf("request failed: %v", err)
+	}
+	defer resp.Body.Close()
+
+	// Read response
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		return nil, fmt.Errorf("failed to read response: %v", err)
+	}
+
+	// Parse response
+	var result CommandResponse
+	if err := json.Unmarshal(body, &result); err != nil {
+		return nil, fmt.Errorf("failed to parse response: %v", err)
+	}
+
+	// Check for errors
+	if result.Error != "" {
+		return &result, fmt.Errorf("%s", result.Error)
+	}
+
+	return &result, nil
+}
+
 func executeCommand(cmdStr string, args []string) error {
 	// Create command
 	cmd := exec.Command(cmdStr, args...)
@@ -372,21 +433,27 @@ func runTerminal() {
 		"threshold":    config.ConfidenceThreshold,
 	})
 
-	// Initialize scanner for user input
-	scanner := bufio.NewScanner(os.Stdin)
+	// Set up readline with tab completion
+	rl, err := setupTabCompletion()
+	if err != nil {
+		fmt.Printf("%sError setting up terminal: %v%s\n", ColorRed, err, ColorReset)
+		os.Exit(1)
+	}
+	defer rl.Close()
 
 	// Main loop
 	for {
-		// Show prompt
-		fmt.Print(getPrompt())
+		// Update prompt (in case it changes dynamically)
+		rl.SetPrompt(getPrompt())
 
-		// Read user input
-		if !scanner.Scan() {
+		// Read line with tab completion support
+		input, err := rl.Readline()
+		if err != nil { // EOF or interrupted
 			break
 		}
 
-		// Get input and trim whitespace
-		input := strings.TrimSpace(scanner.Text())
+		// Trim whitespace
+		input = strings.TrimSpace(input)
 
 		// Check for exit commands
 		if input == "exit" || input == "quit" {
@@ -731,6 +798,98 @@ func displayConfig() {
 	fmt.Printf("%s%s║%s Auto-Execute: %s%-26s%s%s║%s\n", Bold, ColorPurple, ColorReset, Bold, autoStatus, ColorReset, Bold, ColorReset)
 	fmt.Printf("%s%s║%s Confidence Threshold: %s%-20s%s%s║%s\n", Bold, ColorPurple, ColorReset, Bold, threshold, ColorReset, Bold, ColorReset)
 	fmt.Printf("%s%s╚════════════════════════════════════════════╝%s\n", Bold, ColorPurple, ColorReset)
+}
+
+// Do implements the readline.AutoCompleter interface
+func (c *DynamicCompleter) Do(line []rune, pos int) ([][]rune, int) {
+	if len(line) == 0 {
+		return nil, 0
+	}
+
+	// Convert current input to string
+	currentInput := string(line[:pos])
+
+	// Skip completion for direct commands and special commands
+	if strings.HasPrefix(currentInput, "!") || strings.HasPrefix(currentInput, "#") {
+		return nil, 0
+	}
+
+	// Call predictNextWord
+	suggestions, err := getNextWordSuggestions(currentInput)
+	if err != nil {
+		// Just return no suggestions on error
+		return nil, 0
+	}
+
+	// Format suggestions
+	var results [][]rune
+
+	// Extract the last word - this is what we're completing
+	words := strings.Fields(currentInput)
+	lastWord := ""
+	if len(words) > 0 && !strings.HasSuffix(currentInput, " ") {
+		lastWord = words[len(words)-1]
+	}
+
+	// Create completion options
+	for _, suggestion := range suggestions {
+		results = append(results, []rune(suggestion))
+	}
+
+	// Return the completion options and the length of text to replace
+	return results, len(lastWord)
+}
+
+// setupTabCompletion configures readline with tab completion
+func setupTabCompletion() (*readline.Instance, error) {
+	// Configure readline with custom completer
+	rl, err := readline.NewEx(&readline.Config{
+		Prompt:          getPrompt(),
+		HistoryFile:     ".command_history",
+		AutoComplete:    &DynamicCompleter{},
+		InterruptPrompt: "^C",
+		EOFPrompt:       "exit",
+	})
+
+	return rl, err
+}
+
+// getNextWordSuggestions calls predictNextWord and formats the results
+func getNextWordSuggestions(input string) ([]string, error) {
+	// Call the predict function
+	result, err := predictNextWord(input)
+	if err != nil {
+		return nil, err
+	}
+
+	// Extract suggestions from the result
+	// This assumes the predictNextWord returns predictions in some format
+	// You'll need to adapt this based on the actual structure of CommandResponse
+	suggestions := []string{}
+
+	// If NextWordSuggestions field exists in your CommandResponse
+	if len(result.NextWordSuggestions) > 0 {
+		suggestions = result.NextWordSuggestions
+	} else {
+		// Fallback: use the command itself as a suggestion
+		if result.Command != "" {
+			// If we have a command result but no explicit next word suggestions,
+			// we'll use the command itself as a suggestion
+			cmdParts := strings.Fields(result.Command)
+			if len(cmdParts) > 0 {
+				suggestions = append(suggestions, cmdParts[0])
+			}
+
+			// Add args as additional suggestions if available
+			for _, arg := range result.Args {
+				if arg != "" {
+					suggestions = append(suggestions, arg)
+				}
+			}
+		}
+	}
+
+	return suggestions, nil
 }
 
 // Main function

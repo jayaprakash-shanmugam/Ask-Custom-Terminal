@@ -2,7 +2,7 @@ import json
 import os
 import time
 import logging
-import datetime
+from datetime import datetime, timezone
 from flask import Flask, request, jsonify
 from pymongo import MongoClient
 from command_model import CommandModelTrainer
@@ -53,7 +53,7 @@ def log_audit(event_type, message, metadata=None):
         return
     
     audit_entry = {
-        "timestamp": datetime.datetime.now(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "event_type": event_type,
         "message": message,
         "metadata": metadata or {}
@@ -69,7 +69,7 @@ def ping():
     """Simple ping endpoint to check if service is running"""
     return jsonify({
         "status": "ok",
-        "timestamp": datetime.datetime.now().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "service": "terminal-model-server"
     })
 
@@ -78,7 +78,7 @@ def health_check():
     """Comprehensive health check endpoint"""
     health_data = {
         "status": "healthy",
-        "timestamp": datetime.datetime.now().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "service": "terminal-model-server",
         "model_loaded": trainer.model is not None,
         "checks": {
@@ -145,7 +145,7 @@ def predict():
         
         # Add request ID and metadata
         result['request_id'] = str(int(time.time() * 1000))
-        result['timestamp'] = datetime.datetime.now().isoformat()
+        result['timestamp'] = datetime.now(timezone.utc).isoformat()
         
         # Calculate duration
         duration = time.time() - start_time
@@ -170,6 +170,68 @@ def predict():
         logger.error(f"Error making prediction: {error_message}", exc_info=True)
         
         log_audit("predict_error", "Error making prediction", {
+            "client_id": client_id,
+            "session_id": session_id, 
+            "query": query,
+            "error": error_message
+        })
+        
+        return jsonify({
+            'error': error_message,
+            'status': 'error',
+            'request_id': str(int(time.time() * 1000))
+        }), 500
+    
+@app.route('/predictNextWord', methods=['POST'])
+def predict_next_word():
+    """Predict the next word in a command"""
+    start_time = time.time()
+    
+    # Get request data
+    data = request.json
+    if not data or 'query' not in data:
+        logger.warning("Invalid request: missing query")
+        log_audit("predict_next_word_error", "Missing query in request", {"error": "Missing query"})
+        return jsonify({'error': 'Query is required'}), 400
+    
+    client_id = data.get('client_id', 'unknown')
+    session_id = data.get('session_id', 'unknown')
+    query = data['query']
+    
+    try:
+        # Make prediction
+        predicted_words = trainer.predict_next_word(query)
+
+        # Create a dictionary with the result
+        result = {
+            'next_word_suggestions': predicted_words,
+            'predicted_word': predicted_words[0] if predicted_words else '',
+            'confidence': 1.0 if predicted_words else 0.0,  # Default confidence
+            'request_id': str(int(time.time() * 1000)),
+            'timestamp': datetime.now(timezone.utc).isoformat()
+        }
+        
+        # Calculate duration
+        duration = time.time() - start_time
+        result['duration'] = f"{duration:.4f}s"
+        
+        # Log the request and response
+        log_audit("next_word_prediction", "Next word predicted from query", {
+            "client_id": client_id,
+            "session_id": session_id,
+            "query": query,
+            "predicted_words": predicted_words,
+            "duration": duration,
+            "request_id": result['request_id']
+        })
+        
+        return jsonify(result)
+    
+    except Exception as e:
+        error_message = str(e)
+        logger.error(f"Error making next word prediction: {error_message}", exc_info=True)
+        
+        log_audit("predict_next_word_error", "Error making next word prediction", {
             "client_id": client_id,
             "session_id": session_id, 
             "query": query,
@@ -283,6 +345,13 @@ if __name__ == '__main__':
                 logger.info("Model training completed")
                 log_audit("initial_training", "Initial model training at startup", {
                     "model_path": MODEL_PATH,
+                    "dataset_path": DATA_PATH
+                })
+
+                # initialize n-gram model
+                trainer.build_ngram_model(DATA_PATH)
+                logger.info("N-gram model built successfully")
+                log_audit("ngram_model_built", "N-gram model built successfully", {
                     "dataset_path": DATA_PATH
                 })
             except Exception as e:

@@ -4,7 +4,10 @@ go 1.24.0
 
 require go.mongodb.org/mongo-driver v1.17.3
 
+require golang.org/x/sys v0.23.0 // indirect
+
 require (
+	github.com/chzyer/readline v1.5.1
 	github.com/golang/snappy v0.0.4 // indirect
 	github.com/klauspost/compress v1.16.7 // indirect
 	github.com/montanaflynn/stats v0.7.1 // indirect

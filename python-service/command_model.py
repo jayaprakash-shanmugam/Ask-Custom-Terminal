@@ -11,6 +11,7 @@ from sklearn.svm import SVC
 import pickle
 import os
 import re
+from collections import defaultdict, Counter
 
 class CommandModelTrainer:
     def __init__(self, model_path=None):
@@ -22,7 +23,8 @@ class CommandModelTrainer:
         """
         self.model = None
         self.vectorizer = None
-        
+        self.bigrams = defaultdict(Counter)
+
         if model_path and os.path.exists(model_path):
             self.load_model(model_path)
         else:
@@ -129,7 +131,7 @@ class CommandModelTrainer:
         # Store the trained pipeline for future use
         self.model = pipeline.named_steps['classifier']
         self.vectorizer = pipeline.named_steps['vectorizer']
-        
+
         # Save model if a path is provided
         if model_save_path:
             os.makedirs(os.path.dirname(model_save_path), exist_ok=True)
@@ -167,8 +169,8 @@ class CommandModelTrainer:
         prediction = self.model.predict(query_vector)[0]
         probabilities = self.model.predict_proba(query_vector)[0]
         confidence = max(probabilities)
-
-        if confidence< 0.4:
+        print(f"Prediction: {prediction}, Confidence: {confidence}")
+        if not confidence:
             return{
                 'command': None,
                 'args': None,
@@ -197,7 +199,56 @@ class CommandModelTrainer:
                 'explanation': "Generated based on your request",
                 'confidence': float(confidence)
             }
-    
+        
+    def build_ngram_model(self, dataset_path):
+        """
+        Build a bigram model from the natural language commands
+        
+        Args:
+            dataset_path: Path to the JSON file containing command data
+        """
+
+        # Load dataset
+        df = self.load_dataset(dataset_path)
+
+        self.bigrams = defaultdict(Counter)
+        for text in df['natural_language']:
+            tokens = self.tokenize(text)
+            for i in range(len(tokens) - 1):
+                current_word = tokens[i]
+                next_word = tokens[i + 1]
+                # Update bigram counts
+                self.bigrams[current_word][next_word] += 1
+
+        # Save bigram model as part of the overall model state
+        if hasattr(self, 'model_path') and self.model_path:
+            self.save_model(self.model_path)
+        
+    def predict_next_word(self, query, top_k=3):
+        """
+        Predict the next word based on the last word using bigram model
+
+        Args:
+            query: Partial natural language string
+            top_k: Number of suggestions to return
+
+        Returns:
+            list: Top-k predicted next words
+        """
+
+        # Ensure the bigram model is built
+        if not self.bigrams:
+            return []
+
+        tokens = self.tokenize(query)
+        if not tokens:
+            return []
+        last_word = tokens[-1]
+        next_word_counter = self.bigrams.get(last_word)
+        if not next_word_counter:
+            return []
+        return [word for word, _ in next_word_counter.most_common(top_k)]
+
     def save_model(self, model_path):
         """
         Save the trained model to a file
@@ -205,9 +256,11 @@ class CommandModelTrainer:
         Args:
             model_path: Path to save the model
         """
+        self.model_path = model_path
         model_data = {
             'vectorizer': self.vectorizer,
-            'model': self.model
+            'model': self.model,
+            'bigrams': dict(self.bigrams)
         }
         
         with open(model_path, 'wb') as f:
@@ -220,8 +273,31 @@ class CommandModelTrainer:
         Args:
             model_path: Path to the saved model
         """
+        self.model_path = model_path
         with open(model_path, 'rb') as f:
             model_data = pickle.load(f)
         
         self.vectorizer = model_data['vectorizer']
         self.model = model_data['model']
+
+        # Load bigrams if available, otherwise initialize empty
+        if 'bigrams' in model_data:
+            # Convert back to defaultdict(Counter)
+            self.bigrams = defaultdict(Counter)
+            for word, counter_dict in model_data['bigrams'].items():
+                self.bigrams[word] = Counter(counter_dict)
+        else:
+            self.bigrams = defaultdict(Counter)
+
+    def tokenize(self, text):
+        """
+        Tokenize text into words
+        
+        Args:
+            text: Input text string
+            
+        Returns:
+            list: List of tokens/words
+        """
+        # Convert to lowercase and extract word tokens
+        return re.findall(r'\w+', text.lower())
