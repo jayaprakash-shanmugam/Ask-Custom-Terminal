@@ -6,6 +6,255 @@
     ],
     "explanation": "Lists all files (-a) in long format (-l)"
   },
+  "ls_": {
+    "command": "ls",
+    "args": [],
+    "explanation": "Shows files and directories in the current location"
+  },
+  "ls_-l": {
+    "command": "ls",
+    "args": [
+      "-l"
+    ],
+    "explanation": "Lists files in long format with permissions, size, and date"
+  },
+  "ls_-lh": {
+    "command": "ls",
+    "args": [
+      "-lh"
+    ],
+    "explanation": "Lists files with sizes in KB, MB, GB format"
+  },
+  "ls_-R": {
+    "command": "ls",
+    "args": [
+      "-R"
+    ],
+    "explanation": "Lists files in current directory and all subdirectories"
+  },
+  "cd_directory": {
+    "command": "cd",
+    "args": [
+      "directory"
+    ],
+    "explanation": "Navigates to the specified directory"
+  },
+  "cd_..": {
+    "command": "cd",
+    "args": [
+      ".."
+    ],
+    "explanation": "Moves to the parent directory"
+  },
+  "cd_~": {
+    "command": "cd",
+    "args": [
+      "~"
+    ],
+    "explanation": "Changes to the user's home directory"
+  },
+  "pwd_": {
+    "command": "pwd",
+    "args": [],
+    "explanation": "Prints the current working directory path"
+  },
+  "mkdir_directory_name": {
+    "command": "mkdir",
+    "args": [
+      "directory_name"
+    ],
+    "explanation": "Makes a new directory with the specified name"
+  },
+  "mkdir_-p,path/to/directory": {
+    "command": "mkdir",
+    "args": [
+      "-p",
+      "path/to/directory"
+    ],
+    "explanation": "Creates parent directories as needed"
+  },
+  "rm_file": {
+    "command": "rm",
+    "args": [
+      "file"
+    ],
+    "explanation": "Removes the specified file"
+  },
+  "rm_-r,directory": {
+    "command": "rm",
+    "args": [
+      "-r",
+      "directory"
+    ],
+    "explanation": "Recursively removes directories and their contents"
+  },
+  "rm_-rf,directory": {
+    "command": "rm",
+    "args": [
+      "-rf",
+      "directory"
+    ],
+    "explanation": "Forcefully removes directories without prompting"
+  },
+  "cp_source,destination": {
+    "command": "cp",
+    "args": [
+      "source",
+      "destination"
+    ],
+    "explanation": "Copies a file from source to destination"
+  },
+  "cp_-r,source_dir,destination_dir": {
+    "command": "cp",
+    "args": [
+      "-r",
+      "source_dir",
+      "destination_dir"
+    ],
+    "explanation": "Recursively copies directories and their contents"
+  },
+  "mv_source,destination": {
+    "command": "mv",
+    "args": [
+      "source",
+      "destination"
+    ],
+    "explanation": "Moves files or directories to a new location or renames them"
+  },
+  "touch_filename": {
+    "command": "touch",
+    "args": [
+      "filename"
+    ],
+    "explanation": "Creates a new empty file or updates timestamp of existing file"
+  },
+  "cat_filename": {
+    "command": "cat",
+    "args": [
+      "filename"
+    ],
+    "explanation": "Displays the entire contents of a file"
+  },
+  "less_filename": {
+    "command": "less",
+    "args": [
+      "filename"
+    ],
+    "explanation": "Views file with pagination and scrolling"
+  },
+  "head_filename": {
+    "command": "head",
+    "args": [
+      "filename"
+    ],
+    "explanation": "Displays the first 10 lines of a file"
+  },
+  "head_-n,20,filename": {
+    "command": "head",
+    "args": [
+      "-n",
+      "20",
+      "filename"
+    ],
+    "explanation": "Displays a specific number of lines from the beginning"
+  },
+  "tail_filename": {
+    "command": "tail",
+    "args": [
+      "filename"
+    ],
+    "explanation": "Displays the last 10 lines of a file"
+  },
+  "tail_-f,filename": {
+    "command": "tail",
+    "args": [
+      "-f",
+      "filename"
+    ],
+    "explanation": "Shows the end of a file and continues to display updates as they occur"
+  },
+  "grep_pattern,filename": {
+    "command": "grep",
+    "args": [
+      "pattern",
+      "filename"
+    ],
+    "explanation": "Finds lines containing the specified pattern in a file"
+  },
+  "grep_-i,pattern,filename": {
+    "command": "grep",
+    "args": [
+      "-i",
+      "pattern",
+      "filename"
+    ],
+    "explanation": "Finds text ignoring case differences"
+  },
+  "grep_-r,pattern,directory": {
+    "command": "grep",
+    "args": [
+      "-r",
+      "pattern",
+      "directory"
+    ],
+    "explanation": "Searches for pattern in all files within directories and subdirectories"
+  },
+  "grep_-v,pattern,filename": {
+    "command": "grep",
+    "args": [
+      "-v",
+      "pattern",
+      "filename"
+    ],
+    "explanation": "Displays lines that don't contain the specified pattern"
+  },
+  "find_directory,-name,pattern": {
+    "command": "find",
+    "args": [
+      "directory",
+      "-name",
+      "pattern"
+    ],
+    "explanation": "Searches for files matching the specified name pattern"
+  },
+  "find_directory,-type,f,-name,*.txt": {
+    "command": "find",
+    "args": [
+      "directory",
+      "-type",
+      "f",
+      "-name",
+      "*.txt"
+    ],
+    "explanation": "Searches for files with .txt extension"
+  },
+  "find_directory,-type,d": {
+    "command": "find",
+    "args": [
+      "directory",
+      "-type",
+      "d"
+    ],
+    "explanation": "Searches for directories only"
+  },
+  "find_directory,-size,+10M": {
+    "command": "find",
+    "args": [
+      "directory",
+      "-size",
+      "+10M"
+    ],
+    "explanation": "Searches for files exceeding 10 megabytes in size"
+  },
+  "find_directory,-mtime,-7": {
+    "command": "find",
+    "args": [
+      "directory",
+      "-mtime",
+      "-7"
+    ],
+    "explanation": "Searches for files modified in the last 7 days"
+  },
   "ps_aux": {
     "command": "ps",
     "args": [
@@ -13,29 +262,1241 @@
     ],
     "explanation": "Displays all running processes with user and system info"
   },
-  "grep_-r,pattern,.": {
-    "command": "grep",
+  "ps_-ef": {
+    "command": "ps",
     "args": [
-      "-r",
-      "pattern",
-      "."
+      "-ef"
     ],
-    "explanation": "Searches recursively (-r) for 'pattern' in current directory (.)"
+    "explanation": "Shows all processes in full format with parent/child relationships"
   },
-  "find_.,-name,*.log": {
-    "command": "find",
+  "top_": {
+    "command": "top",
+    "args": [],
+    "explanation": "Displays dynamic real-time view of running processes"
+  },
+  "htop_": {
+    "command": "htop",
+    "args": [],
+    "explanation": "Displays an interactive process viewer with more features than top"
+  },
+  "kill_PID": {
+    "command": "kill",
     "args": [
-      ".",
-      "-name",
-      "*.log"
+      "PID"
     ],
-    "explanation": "Searches for files with .log extension in current directory"
+    "explanation": "Sends termination signal to a process by its process ID"
+  },
+  "kill_-9,PID": {
+    "command": "kill",
+    "args": [
+      "-9",
+      "PID"
+    ],
+    "explanation": "Forcefully terminates a process that won't respond to normal kill"
+  },
+  "killall_process_name": {
+    "command": "killall",
+    "args": [
+      "process_name"
+    ],
+    "explanation": "Terminates all processes with the specified name"
   },
   "df_-h": {
     "command": "df",
     "args": [
       "-h"
     ],
-    "explanation": "Shows disk space usage in human-readable format (-h)"
+    "explanation": "Displays disk space usage in human-readable format"
+  },
+  "du_-sh,directory": {
+    "command": "du",
+    "args": [
+      "-sh",
+      "directory"
+    ],
+    "explanation": "Shows the total size of a directory in human-readable format"
+  },
+  "du_-h,--max-depth=1": {
+    "command": "du",
+    "args": [
+      "-h",
+      "--max-depth=1"
+    ],
+    "explanation": "Shows the size of immediate subdirectories in human-readable format"
+  },
+  "free_-h": {
+    "command": "free",
+    "args": [
+      "-h"
+    ],
+    "explanation": "Displays system memory usage in human-readable format"
+  },
+  "uptime_": {
+    "command": "uptime",
+    "args": [],
+    "explanation": "Displays how long the system has been running"
+  },
+  "whoami_": {
+    "command": "whoami",
+    "args": [],
+    "explanation": "Displays the username of the current user"
+  },
+  "id_": {
+    "command": "id",
+    "args": [],
+    "explanation": "Displays user ID, group ID, and groups for the current user"
+  },
+  "who_": {
+    "command": "who",
+    "args": [],
+    "explanation": "Lists users currently logged into the system"
+  },
+  "w_": {
+    "command": "w",
+    "args": [],
+    "explanation": "Shows logged-in users and their current processes"
+  },
+  "date_": {
+    "command": "date",
+    "args": [],
+    "explanation": "Displays the current system date and time"
+  },
+  "cal_": {
+    "command": "cal",
+    "args": [],
+    "explanation": "Displays a calendar for the current month"
+  },
+  "history_": {
+    "command": "history",
+    "args": [],
+    "explanation": "Displays previously executed commands"
+  },
+  "clear_": {
+    "command": "clear",
+    "args": [],
+    "explanation": "Clears the terminal display"
+  },
+  "echo_text": {
+    "command": "echo",
+    "args": [
+      "text"
+    ],
+    "explanation": "Prints text to the terminal"
+  },
+  "which_command": {
+    "command": "which",
+    "args": [
+      "command"
+    ],
+    "explanation": "Displays the location of an executable in PATH"
+  },
+  "whereis_command": {
+    "command": "whereis",
+    "args": [
+      "command"
+    ],
+    "explanation": "Shows the locations of binary, source, and man pages"
+  },
+  "man_command": {
+    "command": "man",
+    "args": [
+      "command"
+    ],
+    "explanation": "Displays the manual page for a command"
+  },
+  "info_command": {
+    "command": "info",
+    "args": [
+      "command"
+    ],
+    "explanation": "Displays comprehensive documentation for a command"
+  },
+  "whatis_command": {
+    "command": "whatis",
+    "args": [
+      "command"
+    ],
+    "explanation": "Displays a one-line description of a command"
+  },
+  "alias_": {
+    "command": "alias",
+    "args": [],
+    "explanation": "Lists all defined command aliases"
+  },
+  "alias_name='command'": {
+    "command": "alias",
+    "args": [
+      "name='command'"
+    ],
+    "explanation": "Creates a shorthand alias for a command"
+  },
+  "unalias_name": {
+    "command": "unalias",
+    "args": [
+      "name"
+    ],
+    "explanation": "Deletes a previously defined alias"
+  },
+  "chmod_permissions,file": {
+    "command": "chmod",
+    "args": [
+      "permissions",
+      "file"
+    ],
+    "explanation": "Modifies file access permissions"
+  },
+  "chmod_+x,file": {
+    "command": "chmod",
+    "args": [
+      "+x",
+      "file"
+    ],
+    "explanation": "Adds execute permission to a file"
+  },
+  "chown_user:group,file": {
+    "command": "chown",
+    "args": [
+      "user:group",
+      "file"
+    ],
+    "explanation": "Changes the owner and group of a file"
+  },
+  "tar_-czf,archive.tar.gz,directory": {
+    "command": "tar",
+    "args": [
+      "-czf",
+      "archive.tar.gz",
+      "directory"
+    ],
+    "explanation": "Creates a compressed tar archive (gzip)"
+  },
+  "tar_-xzf,archive.tar.gz": {
+    "command": "tar",
+    "args": [
+      "-xzf",
+      "archive.tar.gz"
+    ],
+    "explanation": "Extracts files from a compressed tar archive"
+  },
+  "zip_-r,archive.zip,directory": {
+    "command": "zip",
+    "args": [
+      "-r",
+      "archive.zip",
+      "directory"
+    ],
+    "explanation": "Creates a zip archive of a directory"
+  },
+  "unzip_archive.zip": {
+    "command": "unzip",
+    "args": [
+      "archive.zip"
+    ],
+    "explanation": "Extracts files from a zip archive"
+  },
+  "ssh_user@hostname": {
+    "command": "ssh",
+    "args": [
+      "user@hostname"
+    ],
+    "explanation": "Establishes a secure shell connection to a remote host"
+  },
+  "scp_file,user@hostname:path": {
+    "command": "scp",
+    "args": [
+      "file",
+      "user@hostname:path"
+    ],
+    "explanation": "Securely copies files to a remote host"
+  },
+  "rsync_-avz,source,destination": {
+    "command": "rsync",
+    "args": [
+      "-avz",
+      "source",
+      "destination"
+    ],
+    "explanation": "Synchronizes files with advanced options and compression"
+  },
+  "wget_url": {
+    "command": "wget",
+    "args": [
+      "url"
+    ],
+    "explanation": "Downloads files from the web"
+  },
+  "curl_url": {
+    "command": "curl",
+    "args": [
+      "url"
+    ],
+    "explanation": "Makes HTTP requests and displays responses"
+  },
+  "ping_hostname": {
+    "command": "ping",
+    "args": [
+      "hostname"
+    ],
+    "explanation": "Tests network connection to a host"
+  },
+  "ifconfig_": {
+    "command": "ifconfig",
+    "args": [],
+    "explanation": "Displays network interface configuration"
+  },
+  "ip_addr": {
+    "command": "ip",
+    "args": [
+      "addr"
+    ],
+    "explanation": "Displays IP addresses assigned to interfaces"
+  },
+  "netstat_-tuln": {
+    "command": "netstat",
+    "args": [
+      "-tuln"
+    ],
+    "explanation": "Shows active network connections and listening ports"
+  },
+  "ss_-tuln": {
+    "command": "ss",
+    "args": [
+      "-tuln"
+    ],
+    "explanation": "Displays socket statistics, similar to netstat but faster"
+  },
+  "traceroute_hostname": {
+    "command": "traceroute",
+    "args": [
+      "hostname"
+    ],
+    "explanation": "Shows the network path to a destination"
+  },
+  "nslookup_domain": {
+    "command": "nslookup",
+    "args": [
+      "domain"
+    ],
+    "explanation": "Queries DNS servers for domain information"
+  },
+  "dig_domain": {
+    "command": "dig",
+    "args": [
+      "domain"
+    ],
+    "explanation": "Advanced DNS lookup tool with comprehensive output"
+  },
+  "host_domain": {
+    "command": "host",
+    "args": [
+      "domain"
+    ],
+    "explanation": "Simple DNS lookup tool"
+  },
+  "whois_domain": {
+    "command": "whois",
+    "args": [
+      "domain"
+    ],
+    "explanation": "Displays domain registration information"
+  },
+  "uname_-a": {
+    "command": "uname",
+    "args": [
+      "-a"
+    ],
+    "explanation": "Displays detailed system and kernel information"
+  },
+  "lsb_release_-a": {
+    "command": "lsb_release",
+    "args": [
+      "-a"
+    ],
+    "explanation": "Displays Linux distribution-specific information"
+  },
+  "lscpu_": {
+    "command": "lscpu",
+    "args": [],
+    "explanation": "Displays detailed CPU architecture information"
+  },
+  "lsusb_": {
+    "command": "lsusb",
+    "args": [],
+    "explanation": "Lists all USB devices connected to the system"
+  },
+  "lspci_": {
+    "command": "lspci",
+    "args": [],
+    "explanation": "Lists all PCI devices connected to the system"
+  },
+  "dmesg_": {
+    "command": "dmesg",
+    "args": [],
+    "explanation": "Displays kernel ring buffer messages"
+  },
+  "journalctl_": {
+    "command": "journalctl",
+    "args": [],
+    "explanation": "Displays logs from the systemd journal"
+  },
+  "systemctl_status,service": {
+    "command": "systemctl",
+    "args": [
+      "status",
+      "service"
+    ],
+    "explanation": "Shows the status of a systemd service"
+  },
+  "systemctl_start,service": {
+    "command": "systemctl",
+    "args": [
+      "start",
+      "service"
+    ],
+    "explanation": "Starts a systemd service"
+  },
+  "systemctl_stop,service": {
+    "command": "systemctl",
+    "args": [
+      "stop",
+      "service"
+    ],
+    "explanation": "Stops a systemd service"
+  },
+  "systemctl_restart,service": {
+    "command": "systemctl",
+    "args": [
+      "restart",
+      "service"
+    ],
+    "explanation": "Restarts a systemd service"
+  },
+  "systemctl_enable,service": {
+    "command": "systemctl",
+    "args": [
+      "enable",
+      "service"
+    ],
+    "explanation": "Configures a service to start automatically at boot"
+  },
+  "crontab_-l": {
+    "command": "crontab",
+    "args": [
+      "-l"
+    ],
+    "explanation": "Lists scheduled cron jobs for the current user"
+  },
+  "crontab_-e": {
+    "command": "crontab",
+    "args": [
+      "-e"
+    ],
+    "explanation": "Opens the cron job editor for the current user"
+  },
+  "at_time": {
+    "command": "at",
+    "args": [
+      "time"
+    ],
+    "explanation": "Schedules a command to be executed once at a specified time"
+  },
+  "jobs_": {
+    "command": "jobs",
+    "args": [],
+    "explanation": "Lists jobs running in the background in the current shell"
+  },
+  "bg_": {
+    "command": "bg",
+    "args": [],
+    "explanation": "Resumes a suspended job in the background"
+  },
+  "fg_": {
+    "command": "fg",
+    "args": [],
+    "explanation": "Brings a background job to the foreground"
+  },
+  "nohup_command &": {
+    "command": "nohup",
+    "args": [
+      "command &"
+    ],
+    "explanation": "Runs a command that continues after logging out"
+  },
+  "screen_": {
+    "command": "screen",
+    "args": [],
+    "explanation": "Creates a virtual terminal that can be detached and reattached"
+  },
+  "tmux_": {
+    "command": "tmux",
+    "args": [],
+    "explanation": "Launches a terminal multiplexer with windows and panes"
+  },
+  "sort_file": {
+    "command": "sort",
+    "args": [
+      "file"
+    ],
+    "explanation": "Sorts the lines of a text file"
+  },
+  "sort_-n,file": {
+    "command": "sort",
+    "args": [
+      "-n",
+      "file"
+    ],
+    "explanation": "Sorts lines numerically rather than alphabetically"
+  },
+  "uniq_file": {
+    "command": "uniq",
+    "args": [
+      "file"
+    ],
+    "explanation": "Filters out duplicate adjacent lines"
+  },
+  "wc_file": {
+    "command": "wc",
+    "args": [
+      "file"
+    ],
+    "explanation": "Counts lines, words, and characters in a file"
+  },
+  "wc_-l,file": {
+    "command": "wc",
+    "args": [
+      "-l",
+      "file"
+    ],
+    "explanation": "Counts only the number of lines in a file"
+  },
+  "cut_-d,delimiter,-f,fields,file": {
+    "command": "cut",
+    "args": [
+      "-d",
+      "delimiter",
+      "-f",
+      "fields",
+      "file"
+    ],
+    "explanation": "Extracts specific fields (columns) from each line"
+  },
+  "tr_'old','new'": {
+    "command": "tr",
+    "args": [
+      "'old'",
+      "'new'"
+    ],
+    "explanation": "Replaces occurrences of characters"
+  },
+  "diff_file1,file2": {
+    "command": "diff",
+    "args": [
+      "file1",
+      "file2"
+    ],
+    "explanation": "Shows differences between two files"
+  },
+  "comm_file1,file2": {
+    "command": "comm",
+    "args": [
+      "file1",
+      "file2"
+    ],
+    "explanation": "Compares two sorted files line by line"
+  },
+  "sed_'s/pattern/replacement/g',file": {
+    "command": "sed",
+    "args": [
+      "'s/pattern/replacement/g'",
+      "file"
+    ],
+    "explanation": "Stream editor for filtering and transforming text"
+  },
+  "awk_'{print $1}',file": {
+    "command": "awk",
+    "args": [
+      "'{print $1}'",
+      "file"
+    ],
+    "explanation": "Powerful text processing language"
+  },
+  "xargs_command": {
+    "command": "xargs",
+    "args": [
+      "command"
+    ],
+    "explanation": "Builds and executes command lines from standard input"
+  },
+  "tee_file": {
+    "command": "tee",
+    "args": [
+      "file"
+    ],
+    "explanation": "Reads from standard input and writes to both file and standard output"
+  },
+  "ln_-s,target,link_name": {
+    "command": "ln",
+    "args": [
+      "-s",
+      "target",
+      "link_name"
+    ],
+    "explanation": "Creates a symbolic link to a file or directory"
+  },
+  "chroot_directory,command": {
+    "command": "chroot",
+    "args": [
+      "directory",
+      "command"
+    ],
+    "explanation": "Changes the apparent root directory for a command"
+  },
+  "sudo_command": {
+    "command": "sudo",
+    "args": [
+      "command"
+    ],
+    "explanation": "Executes a command with administrative privileges"
+  },
+  "su_username": {
+    "command": "su",
+    "args": [
+      "username"
+    ],
+    "explanation": "Switches to another user account"
+  },
+  "passwd_": {
+    "command": "passwd",
+    "args": [],
+    "explanation": "Changes the current user's password"
+  },
+  "useradd_username": {
+    "command": "useradd",
+    "args": [
+      "username"
+    ],
+    "explanation": "Creates a new user account"
+  },
+  "userdel_username": {
+    "command": "userdel",
+    "args": [
+      "username"
+    ],
+    "explanation": "Deletes a user account"
+  },
+  "groupadd_groupname": {
+    "command": "groupadd",
+    "args": [
+      "groupname"
+    ],
+    "explanation": "Creates a new group"
+  },
+  "groupdel_groupname": {
+    "command": "groupdel",
+    "args": [
+      "groupname"
+    ],
+    "explanation": "Deletes a group"
+  },
+  "usermod_-aG,group,user": {
+    "command": "usermod",
+    "args": [
+      "-aG",
+      "group",
+      "user"
+    ],
+    "explanation": "Adds a user to a supplementary group"
+  },
+  "gzip_file": {
+    "command": "gzip",
+    "args": [
+      "file"
+    ],
+    "explanation": "Compresses a file using gzip compression"
+  },
+  "gunzip_file.gz": {
+    "command": "gunzip",
+    "args": [
+      "file.gz"
+    ],
+    "explanation": "Decompresses a gzip compressed file"
+  },
+  "bzip2_file": {
+    "command": "bzip2",
+    "args": [
+      "file"
+    ],
+    "explanation": "Compresses a file using bzip2 compression (better ratio than gzip)"
+  },
+  "bunzip2_file.bz2": {
+    "command": "bunzip2",
+    "args": [
+      "file.bz2"
+    ],
+    "explanation": "Decompresses a bzip2 compressed file"
+  },
+  "shutdown_now": {
+    "command": "shutdown",
+    "args": [
+      "now"
+    ],
+    "explanation": "Shuts down the system immediately"
+  },
+  "reboot_": {
+    "command": "reboot",
+    "args": [],
+    "explanation": "Restarts the system"
+  },
+  "lsof_": {
+    "command": "lsof",
+    "args": [],
+    "explanation": "Lists all open files and the processes that opened them"
+  },
+  "lsof_-i": {
+    "command": "lsof",
+    "args": [
+      "-i"
+    ],
+    "explanation": "Lists all network connections"
+  },
+  "watch_command": {
+    "command": "watch",
+    "args": [
+      "command"
+    ],
+    "explanation": "Executes a command periodically and displays the output"
+  },
+  "time_command": {
+    "command": "time",
+    "args": [
+      "command"
+    ],
+    "explanation": "Measures how long a command takes to execute"
+  },
+  "nice_command": {
+    "command": "nice",
+    "args": [
+      "command"
+    ],
+    "explanation": "Runs a command with modified scheduling priority"
+  },
+  "mount_": {
+    "command": "mount",
+    "args": [],
+    "explanation": "Shows all mounted filesystems"
+  },
+  "mount_device,directory": {
+    "command": "mount",
+    "args": [
+      "device",
+      "directory"
+    ],
+    "explanation": "Mounts a filesystem to a directory"
+  },
+  "umount_directory": {
+    "command": "umount",
+    "args": [
+      "directory"
+    ],
+    "explanation": "Unmounts a mounted filesystem"
+  },
+  "file_filename": {
+    "command": "file",
+    "args": [
+      "filename"
+    ],
+    "explanation": "Determines the file type"
+  },
+  "stat_file": {
+    "command": "stat",
+    "args": [
+      "file"
+    ],
+    "explanation": "Displays detailed file status information"
+  },
+  "basename_path": {
+    "command": "basename",
+    "args": [
+      "path"
+    ],
+    "explanation": "Strips directory and suffix from filenames"
+  },
+  "dirname_path": {
+    "command": "dirname",
+    "args": [
+      "path"
+    ],
+    "explanation": "Strips the last component from a file path"
+  },
+  "env_": {
+    "command": "env",
+    "args": [],
+    "explanation": "Displays all environment variables"
+  },
+  "printenv_VARIABLE": {
+    "command": "printenv",
+    "args": [
+      "VARIABLE"
+    ],
+    "explanation": "Displays the value of a specific environment variable"
+  },
+  "export_VARIABLE=value": {
+    "command": "export",
+    "args": [
+      "VARIABLE=value"
+    ],
+    "explanation": "Sets an environment variable for the current shell and its children"
+  },
+  "unset_VARIABLE": {
+    "command": "unset",
+    "args": [
+      "VARIABLE"
+    ],
+    "explanation": "Removes an environment variable"
+  },
+  "bc_": {
+    "command": "bc",
+    "args": [],
+    "explanation": "Opens an interactive calculator"
+  },
+  "expr_expression": {
+    "command": "expr",
+    "args": [
+      "expression"
+    ],
+    "explanation": "Evaluates an arithmetic expression"
+  },
+  "seq_start,end": {
+    "command": "seq",
+    "args": [
+      "start",
+      "end"
+    ],
+    "explanation": "Prints a sequence of numbers from start to end"
+  },
+  "yes_string": {
+    "command": "yes",
+    "args": [
+      "string"
+    ],
+    "explanation": "Outputs a string repeatedly until interrupted"
+  },
+  "nl_file": {
+    "command": "nl",
+    "args": [
+      "file"
+    ],
+    "explanation": "Numbers lines in a file"
+  },
+  "more_file": {
+    "command": "more",
+    "args": [
+      "file"
+    ],
+    "explanation": "Views file content one screen at a time (older version of less)"
+  },
+  "fold_-w,width,file": {
+    "command": "fold",
+    "args": [
+      "-w",
+      "width",
+      "file"
+    ],
+    "explanation": "Wraps each line in a file to fit a specified width"
+  },
+  "split_-l,lines,file,prefix": {
+    "command": "split",
+    "args": [
+      "-l",
+      "lines",
+      "file",
+      "prefix"
+    ],
+    "explanation": "Splits a file into smaller files with specified number of lines"
+  },
+  "od_-x,file": {
+    "command": "od",
+    "args": [
+      "-x",
+      "file"
+    ],
+    "explanation": "Displays file content in various formats including hexadecimal"
+  },
+  "iptables_-L": {
+    "command": "iptables",
+    "args": [
+      "-L"
+    ],
+    "explanation": "Lists all firewall rules"
+  },
+  "ufw_status": {
+    "command": "ufw",
+    "args": [
+      "status"
+    ],
+    "explanation": "Shows the status of the Uncomplicated Firewall"
+  },
+  "fallocate_-l,size,file": {
+    "command": "fallocate",
+    "args": [
+      "-l",
+      "size",
+      "file"
+    ],
+    "explanation": "Creates a file of a specified size instantly"
+  },
+  "chage_-l,user": {
+    "command": "chage",
+    "args": [
+      "-l",
+      "user"
+    ],
+    "explanation": "Displays password aging information for a user"
+  },
+  "nmap_host": {
+    "command": "nmap",
+    "args": [
+      "host"
+    ],
+    "explanation": "Network exploration and security auditing tool"
+  },
+  "nc_-l,port": {
+    "command": "nc",
+    "args": [
+      "-l",
+      "port"
+    ],
+    "explanation": "Creates a simple TCP/IP listener on a specified port"
+  },
+  "nft_list,tables": {
+    "command": "nft",
+    "args": [
+      "list",
+      "tables"
+    ],
+    "explanation": "Lists nftables firewall tables (newer alternative to iptables)"
+  },
+  "strace_command": {
+    "command": "strace",
+    "args": [
+      "command"
+    ],
+    "explanation": "Traces system calls and signals of a program"
+  },
+  "ltrace_command": {
+    "command": "ltrace",
+    "args": [
+      "command"
+    ],
+    "explanation": "Traces library calls of a program"
+  },
+  "vmstat_": {
+    "command": "vmstat",
+    "args": [],
+    "explanation": "Displays virtual memory statistics"
+  },
+  "iostat_": {
+    "command": "iostat",
+    "args": [],
+    "explanation": "Reports CPU and input/output statistics for devices and partitions"
+  },
+  "mpstat_": {
+    "command": "mpstat",
+    "args": [],
+    "explanation": "Reports processor related statistics"
+  },
+  "sar_": {
+    "command": "sar",
+    "args": [],
+    "explanation": "Collects and reports system activity information"
+  },
+  "ulimit_-a": {
+    "command": "ulimit",
+    "args": [
+      "-a"
+    ],
+    "explanation": "Displays user limits for system resources"
+  },
+  "fuser_file": {
+    "command": "fuser",
+    "args": [
+      "file"
+    ],
+    "explanation": "Identifies processes using files or sockets"
+  },
+  "pgrep_pattern": {
+    "command": "pgrep",
+    "args": [
+      "pattern"
+    ],
+    "explanation": "Looks up processes based on name and other attributes"
+  },
+  "pkill_pattern": {
+    "command": "pkill",
+    "args": [
+      "pattern"
+    ],
+    "explanation": "Sends signals to processes based on name and other attributes"
+  },
+  "pmap_PID": {
+    "command": "pmap",
+    "args": [
+      "PID"
+    ],
+    "explanation": "Reports memory map of a process"
+  },
+  "last_": {
+    "command": "last",
+    "args": [],
+    "explanation": "Shows listing of last logged in users"
+  },
+  "lastlog_": {
+    "command": "lastlog",
+    "args": [],
+    "explanation": "Reports the most recent login of all users"
+  },
+  "faillog_": {
+    "command": "faillog",
+    "args": [],
+    "explanation": "Displays failed login attempts"
+  },
+  "getent_database,key": {
+    "command": "getent",
+    "args": [
+      "database",
+      "key"
+    ],
+    "explanation": "Gets entries from Name Service Switch libraries"
+  },
+  "hostnamectl_": {
+    "command": "hostnamectl",
+    "args": [],
+    "explanation": "Controls the system hostname and related settings"
+  },
+  "timedatectl_": {
+    "command": "timedatectl",
+    "args": [],
+    "explanation": "Controls the system time and date"
+  },
+  "localectl_": {
+    "command": "localectl",
+    "args": [],
+    "explanation": "Controls the system locale and keyboard layout settings"
+  },
+  "loginctl_": {
+    "command": "loginctl",
+    "args": [],
+    "explanation": "Controls the systemd login manager"
+  },
+  "update-alternatives_--list,command": {
+    "command": "update-alternatives",
+    "args": [
+      "--list",
+      "command"
+    ],
+    "explanation": "Maintains symbolic links determining default commands"
+  },
+  "apropos_keyword": {
+    "command": "apropos",
+    "args": [
+      "keyword"
+    ],
+    "explanation": "Searches the manual page names and descriptions"
+  },
+  "ldd_executable": {
+    "command": "ldd",
+    "args": [
+      "executable"
+    ],
+    "explanation": "Prints shared library dependencies"
+  },
+  "ldconfig_": {
+    "command": "ldconfig",
+    "args": [],
+    "explanation": "Configures dynamic linker run-time bindings"
+  },
+  "dpkg_-l": {
+    "command": "dpkg",
+    "args": [
+      "-l"
+    ],
+    "explanation": "Lists all installed Debian packages"
+  },
+  "apt_list,--installed": {
+    "command": "apt",
+    "args": [
+      "list",
+      "--installed"
+    ],
+    "explanation": "Lists all installed packages via APT package manager"
+  },
+  "apt-get_install,package": {
+    "command": "apt-get",
+    "args": [
+      "install",
+      "package"
+    ],
+    "explanation": "Installs a package using APT package manager"
+  },
+  "apt_update": {
+    "command": "apt",
+    "args": [
+      "update"
+    ],
+    "explanation": "Updates the package lists for upgrades and new package installations"
+  },
+  "apt_upgrade": {
+    "command": "apt",
+    "args": [
+      "upgrade"
+    ],
+    "explanation": "Upgrades all installed packages"
+  },
+  "yum_list,installed": {
+    "command": "yum",
+    "args": [
+      "list",
+      "installed"
+    ],
+    "explanation": "Lists all installed RPM packages"
+  },
+  "yum_install,package": {
+    "command": "yum",
+    "args": [
+      "install",
+      "package"
+    ],
+    "explanation": "Installs a package using YUM package manager"
+  },
+  "dnf_list,installed": {
+    "command": "dnf",
+    "args": [
+      "list",
+      "installed"
+    ],
+    "explanation": "Lists all installed packages via DNF package manager"
+  },
+  "rpm_-qa": {
+    "command": "rpm",
+    "args": [
+      "-qa"
+    ],
+    "explanation": "Lists all installed RPM packages"
+  },
+  "pacman_-Q": {
+    "command": "pacman",
+    "args": [
+      "-Q"
+    ],
+    "explanation": "Lists all installed Arch packages"
+  },
+  "pacman_-S,package": {
+    "command": "pacman",
+    "args": [
+      "-S",
+      "package"
+    ],
+    "explanation": "Installs a package using Pacman package manager"
+  },
+  "zypper_search,--installed-only": {
+    "command": "zypper",
+    "args": [
+      "search",
+      "--installed-only"
+    ],
+    "explanation": "Lists all installed packages on SUSE-based distributions"
+  },
+  "snap_list": {
+    "command": "snap",
+    "args": [
+      "list"
+    ],
+    "explanation": "Lists all installed snap packages"
+  },
+  "flatpak_list": {
+    "command": "flatpak",
+    "args": [
+      "list"
+    ],
+    "explanation": "Lists all installed flatpak packages"
+  },
+  "cfdisk_device": {
+    "command": "cfdisk",
+    "args": [
+      "device"
+    ],
+    "explanation": "Displays or manipulates a disk partition table with user interface"
+  },
+  "fdisk_-l": {
+    "command": "fdisk",
+    "args": [
+      "-l"
+    ],
+    "explanation": "Lists disk partitions"
+  },
+  "parted_-l": {
+    "command": "parted",
+    "args": [
+      "-l"
+    ],
+    "explanation": "Shows disk partitions in detail"
+  },
+  "gdisk_device": {
+    "command": "gdisk",
+    "args": [
+      "device"
+    ],
+    "explanation": "Interactive GUID partition table manipulator"
+  },
+  "mkfs_-t,type,device": {
+    "command": "mkfs",
+    "args": [
+      "-t",
+      "type",
+      "device"
+    ],
+    "explanation": "Builds a Linux filesystem on a device"
+  },
+  "fsck_device": {
+    "command": "fsck",
+    "args": [
+      "device"
+    ],
+    "explanation": "Checks and repairs a Linux filesystem"
+  },
+  "badblocks_device": {
+    "command": "badblocks",
+    "args": [
+      "device"
+    ],
+    "explanation": "Searches a device for bad blocks"
+  },
+  "blkid_": {
+    "command": "blkid",
+    "args": [],
+    "explanation": "Locates/prints block device attributes"
+  },
+  "lsblk_": {
+    "command": "lsblk",
+    "args": [],
+    "explanation": "Lists information about all available block devices"
+  },
+  "taskset_-c,cores,command": {
+    "command": "taskset",
+    "args": [
+      "-c",
+      "cores",
+      "command"
+    ],
+    "explanation": "Sets or retrieves a process's CPU affinity"
+  },
+  "chrt_-f,priority,command": {
+    "command": "chrt",
+    "args": [
+      "-f",
+      "priority",
+      "command"
+    ],
+    "explanation": "Manipulates the real-time attributes of a process"
   }
 }

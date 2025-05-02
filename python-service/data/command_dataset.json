@@ -1,32 +1,1286 @@
 [
-    {
-      "command": "ls",
-      "args": ["-la"],
-      "natural_language": "Show all files in the current directory including hidden ones",
-      "explanation": "Lists all files (-a) in long format (-l)"
-    },
-    {
-      "command": "ps",
-      "args": ["aux"],
-      "natural_language": "Show all running processes",
-      "explanation": "Displays all running processes with user and system info"
-    },
-    {
-      "command": "grep",
-      "args": ["-r", "pattern", "."],
-      "natural_language": "Find text in files",
-      "explanation": "Searches recursively (-r) for 'pattern' in current directory (.)"
-    },
-    {
-      "command": "find",
-      "args": [".", "-name", "*.log"],
-      "natural_language": "Find all log files",
-      "explanation": "Searches for files with .log extension in current directory"
-    },
-    {
-      "command": "df",
-      "args": ["-h"],
-      "natural_language": "Show disk space",
-      "explanation": "Shows disk space usage in human-readable format (-h)"
-    }
-  ]
+  {
+    "command": "ls",
+    "args": ["-la"],
+    "natural_language": "Show all files in the current directory including hidden ones",
+    "explanation": "Lists all files (-a) in long format (-l)"
+  },
+  {
+    "command": "ls",
+    "args": [],
+    "natural_language": "List files in the current directory",
+    "explanation": "Shows files and directories in the current location"
+  },
+  {
+    "command": "ls",
+    "args": ["-l"],
+    "natural_language": "Show files with details",
+    "explanation": "Lists files in long format with permissions, size, and date"
+  },
+  {
+    "command": "ls",
+    "args": ["-lh"],
+    "natural_language": "Show files with human-readable sizes",
+    "explanation": "Lists files with sizes in KB, MB, GB format"
+  },
+  {
+    "command": "ls",
+    "args": ["-R"],
+    "natural_language": "Show files recursively",
+    "explanation": "Lists files in current directory and all subdirectories"
+  },
+  {
+    "command": "cd",
+    "args": ["directory"],
+    "natural_language": "Change to another directory",
+    "explanation": "Navigates to the specified directory"
+  },
+  {
+    "command": "cd",
+    "args": [".."],
+    "natural_language": "Go up one directory",
+    "explanation": "Moves to the parent directory"
+  },
+  {
+    "command": "cd",
+    "args": ["~"],
+    "natural_language": "Go to home directory",
+    "explanation": "Changes to the user's home directory"
+  },
+  {
+    "command": "pwd",
+    "args": [],
+    "natural_language": "Show current directory",
+    "explanation": "Prints the current working directory path"
+  },
+  {
+    "command": "mkdir",
+    "args": ["directory_name"],
+    "natural_language": "Create a new directory",
+    "explanation": "Makes a new directory with the specified name"
+  },
+  {
+    "command": "mkdir",
+    "args": ["-p", "path/to/directory"],
+    "natural_language": "Create nested directories",
+    "explanation": "Creates parent directories as needed"
+  },
+  {
+    "command": "rm",
+    "args": ["file"],
+    "natural_language": "Delete a file",
+    "explanation": "Removes the specified file"
+  },
+  {
+    "command": "rm",
+    "args": ["-r", "directory"],
+    "natural_language": "Delete a directory and its contents",
+    "explanation": "Recursively removes directories and their contents"
+  },
+  {
+    "command": "rm",
+    "args": ["-rf", "directory"],
+    "natural_language": "Force delete a directory",
+    "explanation": "Forcefully removes directories without prompting"
+  },
+  {
+    "command": "cp",
+    "args": ["source", "destination"],
+    "natural_language": "Copy a file",
+    "explanation": "Copies a file from source to destination"
+  },
+  {
+    "command": "cp",
+    "args": ["-r", "source_dir", "destination_dir"],
+    "natural_language": "Copy a directory",
+    "explanation": "Recursively copies directories and their contents"
+  },
+  {
+    "command": "mv",
+    "args": ["source", "destination"],
+    "natural_language": "Move or rename a file",
+    "explanation": "Moves files or directories to a new location or renames them"
+  },
+  {
+    "command": "touch",
+    "args": ["filename"],
+    "natural_language": "Create an empty file",
+    "explanation": "Creates a new empty file or updates timestamp of existing file"
+  },
+  {
+    "command": "cat",
+    "args": ["filename"],
+    "natural_language": "Show file contents",
+    "explanation": "Displays the entire contents of a file"
+  },
+  {
+    "command": "less",
+    "args": ["filename"],
+    "natural_language": "View file contents page by page",
+    "explanation": "Views file with pagination and scrolling"
+  },
+  {
+    "command": "head",
+    "args": ["filename"],
+    "natural_language": "Show beginning of a file",
+    "explanation": "Displays the first 10 lines of a file"
+  },
+  {
+    "command": "head",
+    "args": ["-n", "20", "filename"],
+    "natural_language": "Show first 20 lines of a file",
+    "explanation": "Displays a specific number of lines from the beginning"
+  },
+  {
+    "command": "tail",
+    "args": ["filename"],
+    "natural_language": "Show end of a file",
+    "explanation": "Displays the last 10 lines of a file"
+  },
+  {
+    "command": "tail",
+    "args": ["-f", "filename"],
+    "natural_language": "Follow file updates",
+    "explanation": "Shows the end of a file and continues to display updates as they occur"
+  },
+  {
+    "command": "grep",
+    "args": ["pattern", "filename"],
+    "natural_language": "Search for text in a file",
+    "explanation": "Finds lines containing the specified pattern in a file"
+  },
+  {
+    "command": "grep",
+    "args": ["-i", "pattern", "filename"],
+    "natural_language": "Search for text case-insensitively",
+    "explanation": "Finds text ignoring case differences"
+  },
+  {
+    "command": "grep",
+    "args": ["-r", "pattern", "directory"],
+    "natural_language": "Search for text in all files recursively",
+    "explanation": "Searches for pattern in all files within directories and subdirectories"
+  },
+  {
+    "command": "grep",
+    "args": ["-v", "pattern", "filename"],
+    "natural_language": "Show lines that don't match pattern",
+    "explanation": "Displays lines that don't contain the specified pattern"
+  },
+  {
+    "command": "find",
+    "args": ["directory", "-name", "pattern"],
+    "natural_language": "Find files by name",
+    "explanation": "Searches for files matching the specified name pattern"
+  },
+  {
+    "command": "find",
+    "args": ["directory", "-type", "f", "-name", "*.txt"],
+    "natural_language": "Find all text files",
+    "explanation": "Searches for files with .txt extension"
+  },
+  {
+    "command": "find",
+    "args": ["directory", "-type", "d"],
+    "natural_language": "Find all directories",
+    "explanation": "Searches for directories only"
+  },
+  {
+    "command": "find",
+    "args": ["directory", "-size", "+10M"],
+    "natural_language": "Find files larger than 10MB",
+    "explanation": "Searches for files exceeding 10 megabytes in size"
+  },
+  {
+    "command": "find",
+    "args": ["directory", "-mtime", "-7"],
+    "natural_language": "Find files modified in the last week",
+    "explanation": "Searches for files modified in the last 7 days"
+  },
+  {
+    "command": "ps",
+    "args": ["aux"],
+    "natural_language": "Show all running processes",
+    "explanation": "Displays all running processes with user and system info"
+  },
+  {
+    "command": "ps",
+    "args": ["-ef"],
+    "natural_language": "Show all processes with full details",
+    "explanation": "Shows all processes in full format with parent/child relationships"
+  },
+  {
+    "command": "top",
+    "args": [],
+    "natural_language": "Show process activity in real-time",
+    "explanation": "Displays dynamic real-time view of running processes"
+  },
+  {
+    "command": "htop",
+    "args": [],
+    "natural_language": "Show interactive process viewer",
+    "explanation": "Displays an interactive process viewer with more features than top"
+  },
+  {
+    "command": "kill",
+    "args": ["PID"],
+    "natural_language": "Terminate a process",
+    "explanation": "Sends termination signal to a process by its process ID"
+  },
+  {
+    "command": "kill",
+    "args": ["-9", "PID"],
+    "natural_language": "Force kill a process",
+    "explanation": "Forcefully terminates a process that won't respond to normal kill"
+  },
+  {
+    "command": "killall",
+    "args": ["process_name"],
+    "natural_language": "Kill all processes by name",
+    "explanation": "Terminates all processes with the specified name"
+  },
+  {
+    "command": "df",
+    "args": ["-h"],
+    "natural_language": "Show disk space usage",
+    "explanation": "Displays disk space usage in human-readable format"
+  },
+  {
+    "command": "du",
+    "args": ["-sh", "directory"],
+    "natural_language": "Show directory size",
+    "explanation": "Shows the total size of a directory in human-readable format"
+  },
+  {
+    "command": "du",
+    "args": ["-h", "--max-depth=1"],
+    "natural_language": "Show sizes of subdirectories",
+    "explanation": "Shows the size of immediate subdirectories in human-readable format"
+  },
+  {
+    "command": "free",
+    "args": ["-h"],
+    "natural_language": "Show memory usage",
+    "explanation": "Displays system memory usage in human-readable format"
+  },
+  {
+    "command": "uptime",
+    "args": [],
+    "natural_language": "Show system uptime",
+    "explanation": "Displays how long the system has been running"
+  },
+  {
+    "command": "whoami",
+    "args": [],
+    "natural_language": "Show current user",
+    "explanation": "Displays the username of the current user"
+  },
+  {
+    "command": "id",
+    "args": [],
+    "natural_language": "Show user and group information",
+    "explanation": "Displays user ID, group ID, and groups for the current user"
+  },
+  {
+    "command": "who",
+    "args": [],
+    "natural_language": "Show who is logged in",
+    "explanation": "Lists users currently logged into the system"
+  },
+  {
+    "command": "w",
+    "args": [],
+    "natural_language": "Show who is logged in and what they're doing",
+    "explanation": "Shows logged-in users and their current processes"
+  },
+  {
+    "command": "date",
+    "args": [],
+    "natural_language": "Show current date and time",
+    "explanation": "Displays the current system date and time"
+  },
+  {
+    "command": "cal",
+    "args": [],
+    "natural_language": "Show calendar",
+    "explanation": "Displays a calendar for the current month"
+  },
+  {
+    "command": "history",
+    "args": [],
+    "natural_language": "Show command history",
+    "explanation": "Displays previously executed commands"
+  },
+  {
+    "command": "clear",
+    "args": [],
+    "natural_language": "Clear the terminal screen",
+    "explanation": "Clears the terminal display"
+  },
+  {
+    "command": "echo",
+    "args": ["text"],
+    "natural_language": "Display text",
+    "explanation": "Prints text to the terminal"
+  },
+  {
+    "command": "which",
+    "args": ["command"],
+    "natural_language": "Show path of a command",
+    "explanation": "Displays the location of an executable in PATH"
+  },
+  {
+    "command": "whereis",
+    "args": ["command"],
+    "natural_language": "Locate binary, source, and manual for a command",
+    "explanation": "Shows the locations of binary, source, and man pages"
+  },
+  {
+    "command": "man",
+    "args": ["command"],
+    "natural_language": "Show manual for a command",
+    "explanation": "Displays the manual page for a command"
+  },
+  {
+    "command": "info",
+    "args": ["command"],
+    "natural_language": "Show detailed info about a command",
+    "explanation": "Displays comprehensive documentation for a command"
+  },
+  {
+    "command": "whatis",
+    "args": ["command"],
+    "natural_language": "Show brief description of a command",
+    "explanation": "Displays a one-line description of a command"
+  },
+  {
+    "command": "alias",
+    "args": [],
+    "natural_language": "Show all defined aliases",
+    "explanation": "Lists all defined command aliases"
+  },
+  {
+    "command": "alias",
+    "args": ["name='command'"],
+    "natural_language": "Create command alias",
+    "explanation": "Creates a shorthand alias for a command"
+  },
+  {
+    "command": "unalias",
+    "args": ["name"],
+    "natural_language": "Remove an alias",
+    "explanation": "Deletes a previously defined alias"
+  },
+  {
+    "command": "chmod",
+    "args": ["permissions", "file"],
+    "natural_language": "Change file permissions",
+    "explanation": "Modifies file access permissions"
+  },
+  {
+    "command": "chmod",
+    "args": ["+x", "file"],
+    "natural_language": "Make file executable",
+    "explanation": "Adds execute permission to a file"
+  },
+  {
+    "command": "chown",
+    "args": ["user:group", "file"],
+    "natural_language": "Change file owner",
+    "explanation": "Changes the owner and group of a file"
+  },
+  {
+    "command": "tar",
+    "args": ["-czf", "archive.tar.gz", "directory"],
+    "natural_language": "Create compressed archive",
+    "explanation": "Creates a compressed tar archive (gzip)"
+  },
+  {
+    "command": "tar",
+    "args": ["-xzf", "archive.tar.gz"],
+    "natural_language": "Extract compressed archive",
+    "explanation": "Extracts files from a compressed tar archive"
+  },
+  {
+    "command": "zip",
+    "args": ["-r", "archive.zip", "directory"],
+    "natural_language": "Create zip archive",
+    "explanation": "Creates a zip archive of a directory"
+  },
+  {
+    "command": "unzip",
+    "args": ["archive.zip"],
+    "natural_language": "Extract zip archive",
+    "explanation": "Extracts files from a zip archive"
+  },
+  {
+    "command": "ssh",
+    "args": ["user@hostname"],
+    "natural_language": "Connect to remote server",
+    "explanation": "Establishes a secure shell connection to a remote host"
+  },
+  {
+    "command": "scp",
+    "args": ["file", "user@hostname:path"],
+    "natural_language": "Copy file to remote server",
+    "explanation": "Securely copies files to a remote host"
+  },
+  {
+    "command": "rsync",
+    "args": ["-avz", "source", "destination"],
+    "natural_language": "Sync files and directories",
+    "explanation": "Synchronizes files with advanced options and compression"
+  },
+  {
+    "command": "wget",
+    "args": ["url"],
+    "natural_language": "Download file from the internet",
+    "explanation": "Downloads files from the web"
+  },
+  {
+    "command": "curl",
+    "args": ["url"],
+    "natural_language": "Transfer data from or to a server",
+    "explanation": "Makes HTTP requests and displays responses"
+  },
+  {
+    "command": "ping",
+    "args": ["hostname"],
+    "natural_language": "Check network connectivity",
+    "explanation": "Tests network connection to a host"
+  },
+  {
+    "command": "ifconfig",
+    "args": [],
+    "natural_language": "Show network interfaces",
+    "explanation": "Displays network interface configuration"
+  },
+  {
+    "command": "ip",
+    "args": ["addr"],
+    "natural_language": "Show IP addresses",
+    "explanation": "Displays IP addresses assigned to interfaces"
+  },
+  {
+    "command": "netstat",
+    "args": ["-tuln"],
+    "natural_language": "Show network connections and listening ports",
+    "explanation": "Shows active network connections and listening ports"
+  },
+  {
+    "command": "ss",
+    "args": ["-tuln"],
+    "natural_language": "Show socket statistics",
+    "explanation": "Displays socket statistics, similar to netstat but faster"
+  },
+  {
+    "command": "traceroute",
+    "args": ["hostname"],
+    "natural_language": "Trace route to host",
+    "explanation": "Shows the network path to a destination"
+  },
+  {
+    "command": "nslookup",
+    "args": ["domain"],
+    "natural_language": "Query DNS records",
+    "explanation": "Queries DNS servers for domain information"
+  },
+  {
+    "command": "dig",
+    "args": ["domain"],
+    "natural_language": "Query DNS with detailed output",
+    "explanation": "Advanced DNS lookup tool with comprehensive output"
+  },
+  {
+    "command": "host",
+    "args": ["domain"],
+    "natural_language": "DNS lookup",
+    "explanation": "Simple DNS lookup tool"
+  },
+  {
+    "command": "whois",
+    "args": ["domain"],
+    "natural_language": "Show domain registration info",
+    "explanation": "Displays domain registration information"
+  },
+  {
+    "command": "uname",
+    "args": ["-a"],
+    "natural_language": "Show system information",
+    "explanation": "Displays detailed system and kernel information"
+  },
+  {
+    "command": "lsb_release",
+    "args": ["-a"],
+    "natural_language": "Show Linux distribution info",
+    "explanation": "Displays Linux distribution-specific information"
+  },
+  {
+    "command": "lscpu",
+    "args": [],
+    "natural_language": "Show CPU information",
+    "explanation": "Displays detailed CPU architecture information"
+  },
+  {
+    "command": "lsusb",
+    "args": [],
+    "natural_language": "Show USB devices",
+    "explanation": "Lists all USB devices connected to the system"
+  },
+  {
+    "command": "lspci",
+    "args": [],
+    "natural_language": "Show PCI devices",
+    "explanation": "Lists all PCI devices connected to the system"
+  },
+  {
+    "command": "dmesg",
+    "args": [],
+    "natural_language": "Show kernel messages",
+    "explanation": "Displays kernel ring buffer messages"
+  },
+  {
+    "command": "journalctl",
+    "args": [],
+    "natural_language": "Show system logs",
+    "explanation": "Displays logs from the systemd journal"
+  },
+  {
+    "command": "systemctl",
+    "args": ["status", "service"],
+    "natural_language": "Check service status",
+    "explanation": "Shows the status of a systemd service"
+  },
+  {
+    "command": "systemctl",
+    "args": ["start", "service"],
+    "natural_language": "Start a service",
+    "explanation": "Starts a systemd service"
+  },
+  {
+    "command": "systemctl",
+    "args": ["stop", "service"],
+    "natural_language": "Stop a service",
+    "explanation": "Stops a systemd service"
+  },
+  {
+    "command": "systemctl",
+    "args": ["restart", "service"],
+    "natural_language": "Restart a service",
+    "explanation": "Restarts a systemd service"
+  },
+  {
+    "command": "systemctl",
+    "args": ["enable", "service"],
+    "natural_language": "Enable service at boot",
+    "explanation": "Configures a service to start automatically at boot"
+  },
+  {
+    "command": "crontab",
+    "args": ["-l"],
+    "natural_language": "Show scheduled tasks",
+    "explanation": "Lists scheduled cron jobs for the current user"
+  },
+  {
+    "command": "crontab",
+    "args": ["-e"],
+    "natural_language": "Edit scheduled tasks",
+    "explanation": "Opens the cron job editor for the current user"
+  },
+  {
+    "command": "at",
+    "args": ["time"],
+    "natural_language": "Schedule one-time task",
+    "explanation": "Schedules a command to be executed once at a specified time"
+  },
+  {
+    "command": "jobs",
+    "args": [],
+    "natural_language": "Show background jobs",
+    "explanation": "Lists jobs running in the background in the current shell"
+  },
+  {
+    "command": "bg",
+    "args": [],
+    "natural_language": "Send job to background",
+    "explanation": "Resumes a suspended job in the background"
+  },
+  {
+    "command": "fg",
+    "args": [],
+    "natural_language": "Bring job to foreground",
+    "explanation": "Brings a background job to the foreground"
+  },
+  {
+    "command": "nohup",
+    "args": ["command &"],
+    "natural_language": "Run command immune to hangups",
+    "explanation": "Runs a command that continues after logging out"
+  },
+  {
+    "command": "screen",
+    "args": [],
+    "natural_language": "Start virtual terminal",
+    "explanation": "Creates a virtual terminal that can be detached and reattached"
+  },
+  {
+    "command": "tmux",
+    "args": [],
+    "natural_language": "Start terminal multiplexer",
+    "explanation": "Launches a terminal multiplexer with windows and panes"
+  },
+  {
+    "command": "sort",
+    "args": ["file"],
+    "natural_language": "Sort lines in a file",
+    "explanation": "Sorts the lines of a text file"
+  },
+  {
+    "command": "sort",
+    "args": ["-n", "file"],
+    "natural_language": "Sort numerically",
+    "explanation": "Sorts lines numerically rather than alphabetically"
+  },
+  {
+    "command": "uniq",
+    "args": ["file"],
+    "natural_language": "Remove duplicate lines",
+    "explanation": "Filters out duplicate adjacent lines"
+  },
+  {
+    "command": "wc",
+    "args": ["file"],
+    "natural_language": "Count lines, words, and characters",
+    "explanation": "Counts lines, words, and characters in a file"
+  },
+  {
+    "command": "wc",
+    "args": ["-l", "file"],
+    "natural_language": "Count lines only",
+    "explanation": "Counts only the number of lines in a file"
+  },
+  {
+    "command": "cut",
+    "args": ["-d", "delimiter", "-f", "fields", "file"],
+    "natural_language": "Extract columns from file",
+    "explanation": "Extracts specific fields (columns) from each line"
+  },
+  {
+    "command": "tr",
+    "args": ["'old'", "'new'"],
+    "natural_language": "Replace characters",
+    "explanation": "Replaces occurrences of characters"
+  },
+  {
+    "command": "diff",
+    "args": ["file1", "file2"],
+    "natural_language": "Compare files",
+    "explanation": "Shows differences between two files"
+  },
+  {
+    "command": "comm",
+    "args": ["file1", "file2"],
+    "natural_language": "Compare sorted files",
+    "explanation": "Compares two sorted files line by line"
+  },
+  {
+    "command": "sed",
+    "args": ["'s/pattern/replacement/g'", "file"],
+    "natural_language": "Find and replace text",
+    "explanation": "Stream editor for filtering and transforming text"
+  },
+  {
+    "command": "awk",
+    "args": ["'{print $1}'", "file"],
+    "natural_language": "Process text files",
+    "explanation": "Powerful text processing language"
+  },
+  {
+    "command": "xargs",
+    "args": ["command"],
+    "natural_language": "Build command lines from input",
+    "explanation": "Builds and executes command lines from standard input"
+  },
+  {
+    "command": "tee",
+    "args": ["file"],
+    "natural_language": "Redirect output to file and screen",
+    "explanation": "Reads from standard input and writes to both file and standard output"
+  },
+  {
+    "command": "ln",
+    "args": ["-s", "target", "link_name"],
+    "natural_language": "Create symbolic link",
+    "explanation": "Creates a symbolic link to a file or directory"
+  },
+  {
+    "command": "chroot",
+    "args": ["directory", "command"],
+    "natural_language": "Run command with different root directory",
+    "explanation": "Changes the apparent root directory for a command"
+  },
+  {
+    "command": "sudo",
+    "args": ["command"],
+    "natural_language": "Run command as superuser",
+    "explanation": "Executes a command with administrative privileges"
+  },
+  {
+    "command": "su",
+    "args": ["username"],
+    "natural_language": "Switch user",
+    "explanation": "Switches to another user account"
+  },
+  {
+    "command": "passwd",
+    "args": [],
+    "natural_language": "Change password",
+    "explanation": "Changes the current user's password"
+  },
+  {
+    "command": "useradd",
+    "args": ["username"],
+    "natural_language": "Create user account",
+    "explanation": "Creates a new user account"
+  },
+  {
+    "command": "userdel",
+    "args": ["username"],
+    "natural_language": "Delete user account",
+    "explanation": "Deletes a user account"
+  },
+  {
+    "command": "groupadd",
+    "args": ["groupname"],
+    "natural_language": "Create group",
+    "explanation": "Creates a new group"
+  },
+  {
+    "command": "groupdel",
+    "args": ["groupname"],
+    "natural_language": "Delete group",
+    "explanation": "Deletes a group"
+  },
+  {
+    "command": "usermod",
+    "args": ["-aG", "group", "user"],
+    "natural_language": "Add user to group",
+    "explanation": "Adds a user to a supplementary group"
+  },
+  {
+    "command": "gzip",
+    "args": ["file"],
+    "natural_language": "Compress file",
+    "explanation": "Compresses a file using gzip compression"
+  },
+  {
+    "command": "gunzip",
+    "args": ["file.gz"],
+    "natural_language": "Decompress gzip file",
+    "explanation": "Decompresses a gzip compressed file"
+  },
+  {
+    "command": "bzip2",
+    "args": ["file"],
+    "natural_language": "Compress file with better ratio",
+    "explanation": "Compresses a file using bzip2 compression (better ratio than gzip)"
+  },
+  {
+    "command": "bunzip2",
+    "args": ["file.bz2"],
+    "natural_language": "Decompress bzip2 file",
+    "explanation": "Decompresses a bzip2 compressed file"
+  },
+  {
+    "command": "shutdown",
+    "args": ["now"],
+    "natural_language": "Shutdown system immediately",
+    "explanation": "Shuts down the system immediately"
+  },
+  {
+    "command": "reboot",
+    "args": [],
+    "natural_language": "Restart system",
+    "explanation": "Restarts the system"
+  },
+  {
+    "command": "lsof",
+    "args": [],
+    "natural_language": "List open files",
+    "explanation": "Lists all open files and the processes that opened them"
+  },
+  {
+    "command": "lsof",
+    "args": ["-i"],
+    "natural_language": "List internet connections",
+    "explanation": "Lists all network connections"
+  },
+  {
+    "command": "watch",
+    "args": ["command"],
+    "natural_language": "Run command periodically",
+    "explanation": "Executes a command periodically and displays the output"
+  },
+  {
+    "command": "time",
+    "args": ["command"],
+    "natural_language": "Measure command execution time",
+    "explanation": "Measures how long a command takes to execute"
+  },
+  {
+    "command": "nice",
+    "args": ["command"],
+    "natural_language": "Run command with modified priority",
+    "explanation": "Runs a command with modified scheduling priority"
+  },
+  {
+    "command": "mount",
+    "args": [],
+    "natural_language": "Show mounted filesystems",
+    "explanation": "Shows all mounted filesystems"
+  },
+  {
+    "command": "mount",
+    "args": ["device", "directory"],
+    "natural_language": "Mount a filesystem",
+    "explanation": "Mounts a filesystem to a directory"
+  },
+  {
+    "command": "umount",
+    "args": ["directory"],
+    "natural_language": "Unmount a filesystem",
+    "explanation": "Unmounts a mounted filesystem"
+  },
+  {
+    "command": "file",
+    "args": ["filename"],
+    "natural_language": "Determine file type",
+    "explanation": "Determines the file type"
+  },
+  {
+    "command": "stat",
+    "args": ["file"],
+    "natural_language": "Show file status",
+    "explanation": "Displays detailed file status information"
+  },
+  {
+    "command": "basename",
+    "args": ["path"],
+    "natural_language": "Show filename from path",
+    "explanation": "Strips directory and suffix from filenames"
+  },
+  {
+    "command": "dirname",
+    "args": ["path"],
+    "natural_language": "Show directory part of path",
+    "explanation": "Strips the last component from a file path"
+  },
+  {
+    "command": "env",
+    "args": [],
+    "natural_language": "Show environment variables",
+    "explanation": "Displays all environment variables"
+  },
+  {
+    "command": "printenv",
+    "args": ["VARIABLE"],
+    "natural_language": "Show specific environment variable",
+    "explanation": "Displays the value of a specific environment variable"
+  },
+  {
+    "command": "export",
+    "args": ["VARIABLE=value"],
+    "natural_language": "Set environment variable",
+    "explanation": "Sets an environment variable for the current shell and its children"
+  },
+  {
+    "command": "unset",
+    "args": ["VARIABLE"],
+    "natural_language": "Unset environment variable",
+    "explanation": "Removes an environment variable"
+  },
+  {
+    "command": "bc",
+    "args": [],
+    "natural_language": "Calculator",
+    "explanation": "Opens an interactive calculator"
+  },
+  {
+    "command": "expr",
+    "args": ["expression"],
+    "natural_language": "Evaluate expression",
+    "explanation": "Evaluates an arithmetic expression"
+  },
+  {
+    "command": "seq",
+    "args": ["start", "end"],
+    "natural_language": "Generate sequence of numbers",
+    "explanation": "Prints a sequence of numbers from start to end"
+  },
+  {
+    "command": "yes",
+    "args": ["string"],
+    "natural_language": "Repeat string continuously",
+    "explanation": "Outputs a string repeatedly until interrupted"
+  },
+  {
+    "command": "nl",
+    "args": ["file"],
+    "natural_language": "Number lines in file",
+    "explanation": "Numbers lines in a file"
+  },
+  {
+    "command": "more",
+    "args": ["file"],
+    "natural_language": "View file content page by page",
+    "explanation": "Views file content one screen at a time (older version of less)"
+  },
+  {
+    "command": "fold",
+    "args": ["-w", "width", "file"],
+    "natural_language": "Wrap lines to specified width",
+    "explanation": "Wraps each line in a file to fit a specified width"
+  },
+  {
+    "command": "split",
+    "args": ["-l", "lines", "file", "prefix"],
+    "natural_language": "Split file into smaller files",
+    "explanation": "Splits a file into smaller files with specified number of lines"
+  },
+  {
+    "command": "od",
+    "args": ["-x", "file"],
+    "natural_language": "Show file in hexadecimal",
+    "explanation": "Displays file content in various formats including hexadecimal"
+  },
+  {
+    "command": "iptables",
+    "args": ["-L"],
+    "natural_language": "List firewall rules",
+    "explanation": "Lists all firewall rules"
+  },
+  {
+    "command": "ufw",
+    "args": ["status"],
+    "natural_language": "Show firewall status",
+    "explanation": "Shows the status of the Uncomplicated Firewall"
+  },
+  {
+    "command": "fallocate",
+    "args": ["-l", "size", "file"],
+    "natural_language": "Create file of specific size",
+    "explanation": "Creates a file of a specified size instantly"
+  },
+  {
+    "command": "chage",
+    "args": ["-l", "user"],
+    "natural_language": "Show password expiry information",
+    "explanation": "Displays password aging information for a user"
+  },
+  {
+    "command": "nmap",
+    "args": ["host"],
+    "natural_language": "Scan network ports",
+    "explanation": "Network exploration and security auditing tool"
+  },
+  {
+    "command": "nc",
+    "args": ["-l", "port"],
+    "natural_language": "Listen on a port",
+    "explanation": "Creates a simple TCP/IP listener on a specified port"
+  },
+  {
+    "command": "nft",
+    "args": ["list", "tables"],
+    "natural_language": "List nftables tables",
+    "explanation": "Lists nftables firewall tables (newer alternative to iptables)"
+  },
+  {
+    "command": "strace",
+    "args": ["command"],
+    "natural_language": "Trace system calls",
+    "explanation": "Traces system calls and signals of a program"
+  },
+  {
+    "command": "ltrace",
+    "args": ["command"],
+    "natural_language": "Trace library calls",
+    "explanation": "Traces library calls of a program"
+  },
+  {
+    "command": "vmstat",
+    "args": [],
+    "natural_language": "Show virtual memory statistics",
+    "explanation": "Displays virtual memory statistics"
+  },
+  {
+    "command": "iostat",
+    "args": [],
+    "natural_language": "Show I/O statistics",
+    "explanation": "Reports CPU and input/output statistics for devices and partitions"
+  },
+  {
+    "command": "mpstat",
+    "args": [],
+    "natural_language": "Show multiprocessor statistics",
+    "explanation": "Reports processor related statistics"
+  },
+  {
+    "command": "sar",
+    "args": [],
+    "natural_language": "Show system activity",
+    "explanation": "Collects and reports system activity information"
+  },
+  {
+    "command": "ulimit",
+    "args": ["-a"],
+    "natural_language": "Show resource limits",
+    "explanation": "Displays user limits for system resources"
+  },
+  {
+    "command": "fuser",
+    "args": ["file"],
+    "natural_language": "Show processes using a file",
+    "explanation": "Identifies processes using files or sockets"
+  },
+  {
+    "command": "pgrep",
+    "args": ["pattern"],
+    "natural_language": "Find processes by name",
+    "explanation": "Looks up processes based on name and other attributes"
+  },
+  {
+    "command": "pkill",
+    "args": ["pattern"],
+    "natural_language": "Kill processes by name",
+    "explanation": "Sends signals to processes based on name and other attributes"
+  },
+  {
+    "command": "pmap",
+    "args": ["PID"],
+    "natural_language": "Show memory map of process",
+    "explanation": "Reports memory map of a process"
+  },
+  {
+    "command": "last",
+    "args": [],
+    "natural_language": "Show last logged in users",
+    "explanation": "Shows listing of last logged in users"
+  },
+  {
+    "command": "lastlog",
+    "args": [],
+    "natural_language": "Show last login of all users",
+    "explanation": "Reports the most recent login of all users"
+  },
+  {
+    "command": "faillog",
+    "args": [],
+    "natural_language": "Show failed login attempts",
+    "explanation": "Displays failed login attempts"
+  },
+  {
+    "command": "getent",
+    "args": ["database", "key"],
+    "natural_language": "Get entries from administrative database",
+    "explanation": "Gets entries from Name Service Switch libraries"
+  },
+  {
+    "command": "hostnamectl",
+    "args": [],
+    "natural_language": "Show system hostname information",
+    "explanation": "Controls the system hostname and related settings"
+  },
+  {
+    "command": "timedatectl",
+    "args": [],
+    "natural_language": "Show system time and date",
+    "explanation": "Controls the system time and date"
+  },
+  {
+    "command": "localectl",
+    "args": [],
+    "natural_language": "Show system locale",
+    "explanation": "Controls the system locale and keyboard layout settings"
+  },
+  {
+    "command": "loginctl",
+    "args": [],
+    "natural_language": "Show active user sessions",
+    "explanation": "Controls the systemd login manager"
+  },
+  {
+    "command": "update-alternatives",
+    "args": ["--list", "command"],
+    "natural_language": "List alternative commands",
+    "explanation": "Maintains symbolic links determining default commands"
+  },
+  {
+    "command": "apropos",
+    "args": ["keyword"],
+    "natural_language": "Search manual pages",
+    "explanation": "Searches the manual page names and descriptions"
+  },
+  {
+    "command": "ldd",
+    "args": ["executable"],
+    "natural_language": "Show shared library dependencies",
+    "explanation": "Prints shared library dependencies"
+  },
+  {
+    "command": "ldconfig",
+    "args": [],
+    "natural_language": "Configure dynamic linker",
+    "explanation": "Configures dynamic linker run-time bindings"
+  },
+  {
+    "command": "dpkg",
+    "args": ["-l"],
+    "natural_language": "List installed Debian packages",
+    "explanation": "Lists all installed Debian packages"
+  },
+  {
+    "command": "apt",
+    "args": ["list", "--installed"],
+    "natural_language": "List installed packages via APT",
+    "explanation": "Lists all installed packages via APT package manager"
+  },
+  {
+    "command": "apt-get",
+    "args": ["install", "package"],
+    "natural_language": "Install package",
+    "explanation": "Installs a package using APT package manager"
+  },
+  {
+    "command": "apt",
+    "args": ["update"],
+    "natural_language": "Update package lists",
+    "explanation": "Updates the package lists for upgrades and new package installations"
+  },
+  {
+    "command": "apt",
+    "args": ["upgrade"],
+    "natural_language": "Upgrade packages",
+    "explanation": "Upgrades all installed packages"
+  },
+  {
+    "command": "yum",
+    "args": ["list", "installed"],
+    "natural_language": "List installed RPM packages",
+    "explanation": "Lists all installed RPM packages"
+  },
+  {
+    "command": "yum",
+    "args": ["install", "package"],
+    "natural_language": "Install RPM package",
+    "explanation": "Installs a package using YUM package manager"
+  },
+  {
+    "command": "dnf",
+    "args": ["list", "installed"],
+    "natural_language": "List installed packages via DNF",
+    "explanation": "Lists all installed packages via DNF package manager"
+  },
+  {
+    "command": "rpm",
+    "args": ["-qa"],
+    "natural_language": "List all installed RPM packages",
+    "explanation": "Lists all installed RPM packages"
+  },
+  {
+    "command": "pacman",
+    "args": ["-Q"],
+    "natural_language": "List installed Arch packages",
+    "explanation": "Lists all installed Arch packages"
+  },
+  {
+    "command": "pacman",
+    "args": ["-S", "package"],
+    "natural_language": "Install Arch package",
+    "explanation": "Installs a package using Pacman package manager"
+  },
+  {
+    "command": "zypper",
+    "args": ["search", "--installed-only"],
+    "natural_language": "List installed SUSE packages",
+    "explanation": "Lists all installed packages on SUSE-based distributions"
+  },
+  {
+    "command": "snap",
+    "args": ["list"],
+    "natural_language": "List installed snap packages",
+    "explanation": "Lists all installed snap packages"
+  },
+  {
+    "command": "flatpak",
+    "args": ["list"],
+    "natural_language": "List installed flatpak packages",
+    "explanation": "Lists all installed flatpak packages"
+  },
+  {
+    "command": "cfdisk",
+    "args": ["device"],
+    "natural_language": "Partition disk with UI",
+    "explanation": "Displays or manipulates a disk partition table with user interface"
+  },
+  {
+    "command": "fdisk",
+    "args": ["-l"],
+    "natural_language": "List disk partitions",
+    "explanation": "Lists disk partitions"
+  },
+  {
+    "command": "parted",
+    "args": ["-l"],
+    "natural_language": "Show disk partitions",
+    "explanation": "Shows disk partitions in detail"
+  },
+  {
+    "command": "gdisk",
+    "args": ["device"],
+    "natural_language": "Manage GPT partitions",
+    "explanation": "Interactive GUID partition table manipulator"
+  },
+  {
+    "command": "mkfs",
+    "args": ["-t", "type", "device"],
+    "natural_language": "Create filesystem",
+    "explanation": "Builds a Linux filesystem on a device"
+  },
+  {
+    "command": "fsck",
+    "args": ["device"],
+    "natural_language": "Check filesystem",
+    "explanation": "Checks and repairs a Linux filesystem"
+  },
+  {
+    "command": "badblocks",
+    "args": ["device"],
+    "natural_language": "Check for bad blocks",
+    "explanation": "Searches a device for bad blocks"
+  },
+  {
+    "command": "blkid",
+    "args": [],
+    "natural_language": "Show block device attributes",
+    "explanation": "Locates/prints block device attributes"
+  },
+  {
+    "command": "lsblk",
+    "args": [],
+    "natural_language": "List block devices",
+    "explanation": "Lists information about all available block devices"
+  },
+  {
+    "command": "taskset",
+    "args": ["-c", "cores", "command"],
+    "natural_language": "Run command on specific CPU cores",
+    "explanation": "Sets or retrieves a process's CPU affinity"
+  },
+  {
+    "command": "chrt",
+    "args": ["-f", "priority", "command"],
+    "natural_language": "Run command with real-time priority",
+    "explanation": "Manipulates the real-time attributes of a process"
+  }
+]

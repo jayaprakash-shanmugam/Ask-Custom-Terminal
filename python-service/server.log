@@ -119,3 +119,785 @@ ValueError: Invalid classes inferred from unique values of `y`.  Expected: [0 1 
 2025-04-09 20:29:33,590 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
 2025-04-09 20:29:52,059 - werkzeug - INFO - 127.0.0.1 - - [09/Apr/2025 20:29:52] "GET /ping HTTP/1.1" 200 -
 2025-04-09 20:29:52,068 - werkzeug - INFO - 127.0.0.1 - - [09/Apr/2025 20:29:52] "GET /health HTTP/1.1" 200 -
+2025-04-28 21:00:09,554 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-28 21:00:09,555 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-28 21:00:09,584 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-28 21:00:09,585 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 21:01:16,118 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:01:16] "GET /ping HTTP/1.1" 200 -
+2025-04-28 21:01:16,121 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:01:16] "GET /health HTTP/1.1" 200 -
+2025-04-28 21:01:52,964 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:01:52] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:02:06,492 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:02:06] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:02:14,919 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:02:14] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:07:44,328 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-04-28 21:07:44,347 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-04-28 21:07:44,348 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:07:44] "POST /train HTTP/1.1" 200 -
+2025-04-28 21:08:23,400 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:08:23] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:08:34,718 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:08:34] "GET /ping HTTP/1.1" 200 -
+2025-04-28 21:08:34,720 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:08:34] "GET /health HTTP/1.1" 200 -
+2025-04-28 21:08:42,132 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:08:42] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:08:50,840 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:08:50] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:09:34,911 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-28 21:09:34,913 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-28 21:09:34,919 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-28 21:09:34,919 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 21:09:40,109 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:09:40] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:09:58,821 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:09:58] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:12:07,589 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-28 21:12:07,590 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-28 21:12:07,607 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-28 21:12:07,607 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 21:12:26,534 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:12:26] "GET /ping HTTP/1.1" 200 -
+2025-04-28 21:12:26,535 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:12:26] "GET /health HTTP/1.1" 200 -
+2025-04-28 21:12:49,979 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:12:49] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:14:41,121 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-28 21:14:41,122 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-28 21:14:41,129 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-28 21:14:41,129 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 21:15:07,434 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:15:07] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:16:21,761 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:16:21] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:16:56,939 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-28 21:16:56,941 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-28 21:16:56,949 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-28 21:16:56,949 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 21:17:01,886 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:17:01] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:17:42,910 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-28 21:17:42,912 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-28 21:17:42,918 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-28 21:17:42,918 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 21:17:50,171 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:17:50] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:53:14,996 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:53:14] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:53:24,079 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:53:24] "POST /predict HTTP/1.1" 200 -
+2025-04-28 21:53:28,666 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:53:28] "POST /predict HTTP/1.1" 200 -
+2025-04-29 12:15:17,111 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-04-29 12:15:17,393 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-04-29 12:15:17,395 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:15:17] "POST /train HTTP/1.1" 200 -
+2025-04-29 12:15:40,623 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:15:40] "GET /ping HTTP/1.1" 200 -
+2025-04-29 12:15:40,627 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:15:40] "GET /health HTTP/1.1" 200 -
+2025-04-29 12:15:44,113 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:15:44] "POST /predict HTTP/1.1" 200 -
+2025-04-29 12:16:01,754 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:16:01] "POST /predict HTTP/1.1" 200 -
+2025-04-29 12:17:23,649 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:17:23] "POST /predict HTTP/1.1" 200 -
+2025-04-29 12:17:39,389 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 12:17:39] "POST /predict HTTP/1.1" 200 -
+2025-04-29 15:52:02,172 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 15:52:02,177 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 15:52:02,184 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 15:52:02,184 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 15:52:15,623 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 15:52:15] "GET /ping HTTP/1.1" 200 -
+2025-04-29 15:52:15,625 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 15:52:15] "GET /health HTTP/1.1" 200 -
+2025-04-29 16:26:40,434 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 16:26:40,440 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 16:26:40,447 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 16:26:40,447 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 16:26:48,692 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:26:48] "GET /ping HTTP/1.1" 200 -
+2025-04-29 16:26:48,697 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:26:48] "GET /health HTTP/1.1" 200 -
+2025-04-29 16:27:22,440 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-04-29 16:27:22,612 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-04-29 16:27:22,614 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:27:22] "POST /train HTTP/1.1" 200 -
+2025-04-29 16:27:28,553 - terminal-model-server - ERROR - Error making next word prediction: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 206, in predict_next_word
+    result['request_id'] = str(int(time.time() * 1000))
+TypeError: list indices must be integers or slices, not str
+2025-04-29 16:27:28,556 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:27:28] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:27:28,852 - terminal-model-server - ERROR - Error making next word prediction: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 206, in predict_next_word
+    result['request_id'] = str(int(time.time() * 1000))
+TypeError: list indices must be integers or slices, not str
+2025-04-29 16:27:28,855 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:27:28] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:27:29,090 - terminal-model-server - ERROR - Error making next word prediction: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 206, in predict_next_word
+    result['request_id'] = str(int(time.time() * 1000))
+TypeError: list indices must be integers or slices, not str
+2025-04-29 16:27:29,093 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:27:29] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:27:29,326 - terminal-model-server - ERROR - Error making next word prediction: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 206, in predict_next_word
+    result['request_id'] = str(int(time.time() * 1000))
+TypeError: list indices must be integers or slices, not str
+2025-04-29 16:27:29,328 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:27:29] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:27:29,723 - terminal-model-server - ERROR - Error making next word prediction: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 206, in predict_next_word
+    result['request_id'] = str(int(time.time() * 1000))
+TypeError: list indices must be integers or slices, not str
+2025-04-29 16:27:29,726 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:27:29] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:27:35,412 - terminal-model-server - ERROR - Error making next word prediction: list indices must be integers or slices, not str
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 206, in predict_next_word
+    result['request_id'] = str(int(time.time() * 1000))
+TypeError: list indices must be integers or slices, not str
+2025-04-29 16:27:35,415 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:27:35] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:29:32,470 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 16:29:32,472 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 16:29:32,477 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 16:29:32,478 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 16:29:36,551 - terminal-model-server - ERROR - Error making next word prediction: list index out of range
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 207, in predict_next_word
+    'predicted_word': model_result[0] if isinstance(model_result, list) else model_result.get('predicted_word', ''),
+IndexError: list index out of range
+2025-04-29 16:29:36,553 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:29:36] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:30:00,604 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 16:30:00,607 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 16:30:00,612 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 16:30:00,612 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 16:30:04,107 - terminal-model-server - ERROR - Error making next word prediction: list index out of range
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 208, in predict_next_word
+    'predicted_word': model_result[0] if isinstance(model_result, list) else model_result.get('predicted_word', ''),
+IndexError: list index out of range
+2025-04-29 16:30:04,109 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:30:04] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:30:47,634 - terminal-model-server - ERROR - Error making next word prediction: list index out of range
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 208, in predict_next_word
+    'predicted_word': model_result[0] if isinstance(model_result, list) else model_result.get('predicted_word', ''),
+IndexError: list index out of range
+2025-04-29 16:30:47,665 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:30:47] "[35m[1mPOST /predictNextWord HTTP/1.1[0m" 500 -
+2025-04-29 16:33:05,256 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 16:33:05,260 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 16:33:05,267 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 16:33:05,267 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 16:33:09,984 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:33:09] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:33:48,896 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-04-29 16:33:49,062 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-04-29 16:33:49,063 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:33:49] "POST /train HTTP/1.1" 200 -
+2025-04-29 16:33:57,630 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:33:57] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:33:57,888 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:33:57] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:33:58,089 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:33:58] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:33:58,277 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:33:58] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:04,647 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:28,372 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:28] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:28,995 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:28] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:34,919 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:34] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:41,183 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:41] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:45,872 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:45] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:51,431 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:51] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:38:55,888 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:38:55] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:39:02,860 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:39:02] "POST /predict HTTP/1.1" 200 -
+2025-04-29 16:40:09,177 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:40:09] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:40:29,784 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:40:29] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:44:18,783 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:44:18] "GET /ping HTTP/1.1" 200 -
+2025-04-29 16:44:18,785 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:44:18] "GET /health HTTP/1.1" 200 -
+2025-04-29 16:44:23,715 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:44:23] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:44:51,063 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:44:51] "GET /ping HTTP/1.1" 200 -
+2025-04-29 16:44:51,067 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:44:51] "GET /health HTTP/1.1" 200 -
+2025-04-29 16:44:56,299 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:44:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:45:55,532 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:45:55] "GET /ping HTTP/1.1" 200 -
+2025-04-29 16:45:55,534 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:45:55] "GET /health HTTP/1.1" 200 -
+2025-04-29 16:45:57,170 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:45:57] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 16:46:34,829 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:46:34] "GET /ping HTTP/1.1" 200 -
+2025-04-29 16:46:34,841 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:46:34] "GET /health HTTP/1.1" 200 -
+2025-04-29 16:46:36,841 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 16:46:36] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:01:02,628 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:01:02] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:01:02,631 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:01:02] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:01:05,419 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:01:05] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:02:37,294 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 17:02:37,300 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 17:02:37,308 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 17:02:37,308 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 17:02:40,052 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:02:40] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:02:40,055 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:02:40] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:02:42,430 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:02:42] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:03:05,377 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:03:05] "POST /predict HTTP/1.1" 200 -
+2025-04-29 17:03:11,602 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:03:11] "POST /predict HTTP/1.1" 200 -
+2025-04-29 17:03:23,165 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:03:23] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:03:35,394 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:03:35] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:03:58,431 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:03:58] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:03:58,446 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:03:58] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:04:07,106 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 17:04:07,108 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 17:04:07,114 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 17:04:07,114 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 17:04:11,144 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:04:11] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:05:18,583 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:05:18] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:05:28,397 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:05:28] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:05:59,710 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 17:05:59,713 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 17:05:59,718 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 17:05:59,718 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 17:06:07,329 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:06:07] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:06:07,331 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:06:07] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:06:10,137 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:06:10] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:06:19,832 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-04-29 17:06:19,992 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-04-29 17:06:19,993 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:06:19] "POST /train HTTP/1.1" 200 -
+2025-04-29 17:06:24,751 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:06:24] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:07:32,481 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:07:32] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:07:32,484 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:07:32] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:07:40,127 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:07:40] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:08:47,776 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 17:08:47,781 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 17:08:47,799 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 17:08:47,799 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 17:08:50,619 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:08:50] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:08:50,621 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:08:50] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:09:03,380 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:03] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:09:13,961 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:13] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:09:18,815 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-04-29 17:09:18,990 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-04-29 17:09:18,991 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:18] "POST /train HTTP/1.1" 200 -
+2025-04-29 17:09:24,595 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:24] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:09:34,305 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:34] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:09:36,211 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:36] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:09:41,249 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:41] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:09:57,346 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:09:57] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:00,037 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:00] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:04,912 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:05,718 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:05] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:11,128 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:11] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:12,272 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:12] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:12,794 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:12] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:24,669 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:24] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:26,776 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:26] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:30,388 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:30] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:32,946 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:32] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:10:36,743 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:10:36] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:12:54,022 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 17:12:54,025 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 17:12:54,033 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 17:12:54,033 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 17:12:57,299 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:12:57] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:12:57,304 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:12:57] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:13:51,269 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:51] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:52,161 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:52] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:52,660 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:52] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:53,032 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:53,272 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:53,504 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:53,709 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:53,878 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:13:56,366 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:13:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:14:00,942 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-04-29 17:14:01,118 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-04-29 17:14:01,119 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:01] "POST /train HTTP/1.1" 200 -
+2025-04-29 17:14:03,492 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:03] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:14:04,184 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:14:08,284 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:08] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:14:28,122 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:28] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:14:28,127 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:28] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:14:37,027 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:37] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:14:37,755 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:37] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:14:42,451 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:42] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:14:43,875 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:14:43] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:17:02,972 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:17:02] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:17:02,974 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:17:02] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:17:05,411 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:17:05] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:17:59,975 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:17:59] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:17:59,979 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:17:59] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:18:01,923 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:18:01] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:19:56,002 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:19:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:19:56,877 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:19:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:04,501 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:05,906 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:05] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:10,622 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:10] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:12,603 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:12] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:23,520 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:23] "POST /predict HTTP/1.1" 200 -
+2025-04-29 17:20:27,490 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:27] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:29,261 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:29] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:32,449 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:32] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:33,530 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:33] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:39,872 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:39] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:20:41,004 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:20:41] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:21:41,804 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:21:41] "POST /predict HTTP/1.1" 200 -
+2025-04-29 17:22:16,519 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:16] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:17,383 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:17] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:19,230 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:19] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:20,532 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:20] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:22,510 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:22] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:23,964 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:23] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:24,171 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:24] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:25,179 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:25] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:28,321 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:28] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:29,468 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:29] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 17:22:32,282 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:22:32] "POST /predict HTTP/1.1" 200 -
+2025-04-29 17:23:11,818 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:23:11] "GET /ping HTTP/1.1" 200 -
+2025-04-29 17:23:11,821 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:23:11] "GET /health HTTP/1.1" 200 -
+2025-04-29 17:31:32,543 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 17:31:32,547 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-04-29 17:31:32,719 - terminal-model-server - INFO - Model training completed
+2025-04-29 17:31:32,721 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 17:31:32,728 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 17:31:32,728 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 17:33:17,779 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 17:33:17] "POST /predict HTTP/1.1" 200 -
+2025-04-29 18:57:43,036 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-04-29 18:57:43,040 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-04-29 18:57:43,049 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-04-29 18:57:43,050 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-29 18:59:58,187 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 18:59:58] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 18:59:58,597 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 18:59:58] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 18:59:59,053 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 18:59:59] "POST /predictNextWord HTTP/1.1" 200 -
+2025-04-29 19:00:03,515 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 19:00:03] "POST /predict HTTP/1.1" 200 -
+2025-04-29 19:00:32,706 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 19:00:32] "POST /predict HTTP/1.1" 200 -
+2025-04-29 19:00:51,171 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 19:00:51] "POST /predict HTTP/1.1" 200 -
+2025-04-29 19:01:07,747 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 19:01:07] "POST /predict HTTP/1.1" 200 -
+2025-04-29 19:01:16,341 - werkzeug - INFO - 127.0.0.1 - - [29/Apr/2025 19:01:16] "POST /predict HTTP/1.1" 200 -
+2025-05-02 15:33:38,861 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 15:33:38,868 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 15:33:38,892 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 15:33:38,892 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:34:02,272 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:34:02] "GET /ping HTTP/1.1" 200 -
+2025-05-02 15:34:02,274 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:34:02] "GET /health HTTP/1.1" 200 -
+2025-05-02 15:34:53,195 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:34:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:34:56,974 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:34:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:34:57,609 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:34:57] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:34:58,257 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:34:58] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:35:34,084 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-05-02 15:35:34,252 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-05-02 15:35:34,253 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:35:34] "POST /train HTTP/1.1" 200 -
+2025-05-02 15:35:49,006 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:35:49] "POST /predict HTTP/1.1" 200 -
+2025-05-02 15:35:55,308 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:35:55] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:35:56,371 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:35:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:35:56,945 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:35:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:36:16,149 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:16] "GET /ping HTTP/1.1" 200 -
+2025-05-02 15:36:16,150 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:16] "GET /health HTTP/1.1" 200 -
+2025-05-02 15:36:18,483 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:18] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:36:18,766 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:18] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:36:19,034 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:19] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:36:33,776 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-05-02 15:36:33,933 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-05-02 15:36:33,934 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:33] "POST /train HTTP/1.1" 200 -
+2025-05-02 15:36:43,354 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:43] "GET /ping HTTP/1.1" 200 -
+2025-05-02 15:36:43,356 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:43] "GET /health HTTP/1.1" 200 -
+2025-05-02 15:36:45,871 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:45] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:36:50,236 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:50] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:36:51,366 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:51] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:36:51,746 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:36:51] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:37:33,951 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-05-02 15:37:34,113 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-05-02 15:37:34,114 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:37:34] "POST /train HTTP/1.1" 200 -
+2025-05-02 15:37:47,452 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:37:47] "GET /ping HTTP/1.1" 200 -
+2025-05-02 15:37:47,454 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:37:47] "GET /health HTTP/1.1" 200 -
+2025-05-02 15:37:49,392 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:37:49] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:37:51,031 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:37:51] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:39:48,791 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 15:39:48,792 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-05-02 15:39:48,951 - terminal-model-server - INFO - Model training completed
+2025-05-02 15:39:48,956 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 15:39:48,963 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 15:39:48,963 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:40:00,293 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:40:00] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:41:56,185 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 15:41:56,187 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 15:41:56,196 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 15:41:56,197 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:41:59,521 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:41:59] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:42:01,225 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:42:01] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:42:03,200 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:42:03] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:42:19,985 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 15:42:19,987 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-05-02 15:42:20,145 - terminal-model-server - INFO - Model training completed
+2025-05-02 15:42:20,156 - terminal-model-server - INFO - N-gram model built successfully
+2025-05-02 15:42:20,157 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 15:42:20,161 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 15:42:20,161 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:42:34,695 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:42:34] "GET /ping HTTP/1.1" 200 -
+2025-05-02 15:42:34,697 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:42:34] "GET /health HTTP/1.1" 200 -
+2025-05-02 15:42:36,439 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:42:36] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:43:02,897 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:43:02] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:43:03,710 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:43:03] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:46:21,379 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 15:46:21,382 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 15:46:21,387 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 15:46:21,387 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:46:24,193 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:46:24] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:46:25,028 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:46:25] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:46:25,455 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:46:25] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:56:13,411 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 15:56:13,412 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-05-02 15:56:13,586 - terminal-model-server - INFO - Model training completed
+2025-05-02 15:56:13,593 - terminal-model-server - INFO - N-gram model built successfully
+2025-05-02 15:56:13,594 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 15:56:13,599 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 15:56:13,600 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 15:56:17,269 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:56:17] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 15:56:22,391 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 15:56:22] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:10:46,184 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:10:46] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:10:47,024 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:10:47] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:12:30,558 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:12:30] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:12:30,563 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:12:30] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:12:41,251 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:12:41] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:17,253 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:17] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:15:17,257 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:17] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:15:27,307 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:15:27,310 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:15:27,316 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:15:27,316 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:15:30,311 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:30] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:31,148 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:31] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:43,315 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:15:43,318 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-05-02 16:15:43,493 - terminal-model-server - INFO - Model training completed
+2025-05-02 16:15:43,502 - terminal-model-server - INFO - N-gram model built successfully
+2025-05-02 16:15:43,503 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:15:43,506 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:15:43,506 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:15:44,991 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:44] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:46,444 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:46] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:47,177 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:47] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:52,074 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:52] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:52,986 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:52] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:53,900 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:54,224 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:54,427 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:54,653 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:54,886 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:55,132 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:55] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:55,418 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:55] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:55,625 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:55] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:55,852 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:55] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:56,074 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:56,304 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:15:56,525 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:15:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:04,785 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:07,296 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:07] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:23,041 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:23] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:16:23,042 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:23] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:16:24,627 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:24] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:25,124 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:25] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:40,600 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:40] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:16:40,604 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:40] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:16:42,010 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:42] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:42,466 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:42] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:49,919 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:16:49,924 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:16:49,928 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:16:49,928 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:16:51,071 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:51] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:53,849 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:54,268 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:16:54,514 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:16:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:17:00,943 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:17:00,944 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-05-02 16:17:01,106 - terminal-model-server - INFO - Model training completed
+2025-05-02 16:17:01,114 - terminal-model-server - INFO - N-gram model built successfully
+2025-05-02 16:17:01,116 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:17:01,121 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:17:01,121 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:17:02,493 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:02] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:17:04,423 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:17:06,458 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:06] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:17:07,213 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:07] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:17:07,542 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:17:07] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:04,179 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:18:04,181 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:18:04,187 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:18:04,187 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:18:07,331 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:07] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:18:07,334 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:07] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:18:09,478 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:09] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:09,922 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:09] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:21,840 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-05-02 16:18:22,013 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-05-02 16:18:22,014 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:22] "POST /train HTTP/1.1" 200 -
+2025-05-02 16:18:26,320 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:26] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:26,828 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:26] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:27,108 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:27] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:30,471 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-05-02 16:18:30,638 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-05-02 16:18:30,639 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:30] "POST /train HTTP/1.1" 200 -
+2025-05-02 16:18:33,036 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:33] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:18:33,038 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:33] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:18:34,156 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:34] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:35,614 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:35] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:39,276 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:39] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:40,071 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:40] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:40,466 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:40] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:40,689 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:40] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:40,903 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:40] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:18:41,119 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:18:41] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:19:48,978 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:19:48,982 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:19:48,989 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:19:48,989 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:19:50,967 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:19:50] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:19:50,971 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:19:50] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:20:20,921 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:20:20,925 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:20:20,933 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:20:20,933 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:20:30,343 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:20:30] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:20:34,351 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:20:34] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:22:01,374 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:22:01,379 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:22:01,386 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:22:01,387 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:22:04,494 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:22:04] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:22:04,496 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:22:04] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:22:14,584 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:22:14] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:22:23,590 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:22:23,592 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-05-02 16:22:23,758 - terminal-model-server - INFO - Model training completed
+2025-05-02 16:22:23,764 - terminal-model-server - INFO - N-gram model built successfully
+2025-05-02 16:22:23,765 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:22:23,769 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:22:23,769 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:22:26,789 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:22:26] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:22:28,240 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:22:28] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:23:52,449 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:23:52,453 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:23:52,457 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:23:52,457 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:23:53,999 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:23:53] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:23:54,002 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:23:54] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:23:56,559 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:23:56] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:23:59,919 - terminal-model-server - INFO - Training model on dataset: data/command_dataset.json
+2025-05-02 16:24:00,082 - terminal-model-server - INFO - Model training completed with accuracy: 0.0000
+2025-05-02 16:24:00,083 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:24:00] "POST /train HTTP/1.1" 200 -
+2025-05-02 16:24:02,037 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:24:02] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:24:02,039 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:24:02] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:24:03,942 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:24:03] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:24:04,538 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:24:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:24:04,835 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:24:04] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:27:20,351 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:27:20,353 - terminal-model-server - WARNING - No model found at model/command_model.pkl. Training a new model...
+2025-05-02 16:27:20,516 - terminal-model-server - INFO - Model training completed
+2025-05-02 16:27:20,521 - terminal-model-server - INFO - N-gram model built successfully
+2025-05-02 16:27:20,522 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:27:20,526 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:27:20,526 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:27:23,273 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:23] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:27:23,275 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:23] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:27:25,404 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:25] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:27:32,852 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:27:32,855 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:27:32,859 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:27:32,859 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:27:34,359 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:34] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:27:42,063 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:42] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:27:48,274 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:48] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:27:52,177 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:52] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:27:53,551 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:27:54,789 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:27:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 16:28:33,301 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:28:33,304 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:28:33,312 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:28:33,312 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:28:37,683 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:37] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:28:37,687 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:28:37] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:29:03,583 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:29:03] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:29:19,917 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:29:19] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:29:27,934 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:29:27] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:35:23,757 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:35:23] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:35:23,762 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:35:23] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:35:25,365 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:35:25] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:40:34,634 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:40:34,638 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:40:34,645 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:40:34,645 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:50:21,251 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:50:21,254 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:50:21,273 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:50:21,273 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:50:24,029 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:50:24] "GET /ping HTTP/1.1" 200 -
+2025-05-02 16:50:24,031 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:50:24] "GET /health HTTP/1.1" 200 -
+2025-05-02 16:52:18,953 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:52:18,955 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:52:18,960 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:52:18,960 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:52:41,316 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:52:41] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:54:34,651 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:54:34,655 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:54:34,660 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:54:34,660 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:54:44,593 - terminal-model-server - ERROR - Error making prediction: type object 'datetime.datetime' has no attribute 'datetime'
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 148, in predict
+    result['timestamp'] = datetime.datetime.now().isoformat()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-02 16:54:44,610 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:54:44] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-02 16:55:46,977 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:55:46,980 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:55:46,986 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:55:46,986 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:56:02,737 - terminal-model-server - ERROR - Error making prediction: type object 'datetime.datetime' has no attribute 'datetime'
+Traceback (most recent call last):
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 148, in predict
+    result['timestamp'] = datetime.datetime.now().isoformat()
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-02 16:56:02,777 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:56:02] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-05-02 16:57:07,789 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 16:57:07,791 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 16:57:07,801 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 16:57:07,801 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 16:57:16,101 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:57:16] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:58:39,653 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:39] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:58:52,404 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:52] "POST /predict HTTP/1.1" 200 -
+2025-05-02 16:58:56,970 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 16:58:56] "POST /predict HTTP/1.1" 200 -
+2025-05-02 17:00:09,708 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 17:00:09,711 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 17:00:09,720 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 17:00:09,720 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:00:12,249 - service - ERROR - Exception on /ping [GET]
+Traceback (most recent call last):
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/jayaprakash/.local/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/jayaprakash/Projects/Personal/Ask-Custom-Terminal/python-service/service.py", line 72, in ping
+    "timestamp": datetime.datetime.now().isoformat(),
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2025-05-02 17:00:12,251 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:00:12] "[35m[1mGET /ping HTTP/1.1[0m" 500 -
+2025-05-02 17:01:12,384 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 17:01:12,387 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 17:01:12,392 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 17:01:12,392 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:01:16,644 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:16] "GET /ping HTTP/1.1" 200 -
+2025-05-02 17:01:16,647 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:16] "GET /health HTTP/1.1" 200 -
+2025-05-02 17:01:21,218 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:21] "POST /predict HTTP/1.1" 200 -
+2025-05-02 17:01:48,568 - terminal-model-server - INFO - Connected to MongoDB at mongodb://localhost:27017/
+2025-05-02 17:01:48,571 - terminal-model-server - INFO - Starting terminal model server on port 5000
+2025-05-02 17:01:48,578 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.196:5000
+2025-05-02 17:01:48,579 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-02 17:01:50,368 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:50] "GET /ping HTTP/1.1" 200 -
+2025-05-02 17:01:50,371 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:50] "GET /health HTTP/1.1" 200 -
+2025-05-02 17:01:53,144 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:53] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 17:01:54,107 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:54] "POST /predictNextWord HTTP/1.1" 200 -
+2025-05-02 17:01:58,051 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:01:58] "POST /predict HTTP/1.1" 200 -
+2025-05-02 17:02:08,692 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:02:08] "POST /predict HTTP/1.1" 200 -
+2025-05-02 17:03:29,458 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:29] "GET /ping HTTP/1.1" 200 -
+2025-05-02 17:03:29,462 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:29] "GET /health HTTP/1.1" 200 -
+2025-05-02 17:03:32,098 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:32] "POST /predict HTTP/1.1" 200 -
+2025-05-02 17:03:37,121 - werkzeug - INFO - 127.0.0.1 - - [02/May/2025 17:03:37] "POST /predict HTTP/1.1" 200 -

@@ -1,60 +1,118 @@
-<mat-sidenav-container class="sidenav-container">
-  <!-- Sidenav -->
+<!-- Enhanced Sidenav Container with Theme Toggle -->
+<mat-sidenav-container class="sidenav-container" [ngClass]="{'dark-theme': isDarkTheme}">
+  <!-- Enhanced Sidenav with Mini Variant Support -->
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+      [opened]="(isHandset$ | async) === false"
+      [ngClass]="{'mini-variant': isMinimized}">
     
-    <!-- Sidenav Header -->
-    <div class="sidenav-header">
-      <!-- <img src="/UI/src/AS.png" alt="Logo" class="logo"> -->
-      <h2 class="app-name">Audit Portal</h2>
+    <!-- Enhanced Sidenav Header with Logo -->
+    <div class="sidenav-header" [ngClass]="{'minimized': isMinimized}">
+      <div class="logo-container">
+        <!-- <img src="" alt="Logo" class="logo"> -->
+        <h2 class="app-name" *ngIf="!isMinimized">Audit Portal</h2>
+      </div>
     </div>
     
-    <!--  Navigation Links -->
+    <!-- Enhanced Navigation Links with Groups -->
     <mat-nav-list>
-      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link" (click)="closeNavOnMobile()">
-        <mat-icon>dashboard</mat-icon>
-        <span class="nav-label">Dashboard</span>
+      <!-- Dashboard Link -->
+      <a mat-list-item routerLink="/dashboard" routerLinkActive="active-link" (click)="closeNavOnMobile()"
+         matTooltip="Dashboard" [matTooltipDisabled]="!isMinimized" matTooltipPosition="right">
+        <!-- <mat-icon>dashboard</mat-icon> -->
+        <span class="nav-label" *ngIf="!isMinimized">Dashboard</span>
       </a>
-      <a mat-list-item routerLink="/clients" routerLinkActive="active-link" (click)="closeNavOnMobile()">
-        <mat-icon>laptop</mat-icon>
-        <span class="nav-label">Client Audits</span>
-      </a>
-      <a mat-list-item routerLink="/models" routerLinkActive="active-link" (click)="closeNavOnMobile()">
-        <mat-icon>memory</mat-icon>
-        <span class="nav-label">Model Audits</span>
-      </a>
-      <a mat-list-item routerLink="/stats" routerLinkActive="active-link" (click)="closeNavOnMobile()">
-        <mat-icon>bar_chart</mat-icon>
-        <span class="nav-label">Statistics</span>
-      </a>
+      
+      <!-- Client Audits Section -->
+      <div class="nav-group">
+        <div class="nav-group-header" (click)="toggleNavGroup('clients')" *ngIf="!isMinimized">
+          <span>AUDITS</span>
+          <mat-icon>{{ navGroupsExpanded.clients ? 'expand_less' : 'expand_more' }}</mat-icon>
+        </div>
+        
+        <div [ngClass]="{'nav-group-content': true, 'expanded': navGroupsExpanded.clients || isMinimized}">
+          <a mat-list-item routerLink="/clients" routerLinkActive="active-link" (click)="closeNavOnMobile()"
+             matTooltip="Client Audits" [matTooltipDisabled]="!isMinimized" matTooltipPosition="right">
+            <!-- <mat-icon>laptop</mat-icon> -->
+            <span class="nav-label" *ngIf="!isMinimized">Client Audits</span>
+          </a>
+          <a mat-list-item routerLink="/models" routerLinkActive="active-link" (click)="closeNavOnMobile()"
+             matTooltip="Model Audits" [matTooltipDisabled]="!isMinimized" matTooltipPosition="right">
+            <!-- <mat-icon>memory</mat-icon> -->
+            <span class="nav-label" *ngIf="!isMinimized">Model Audits</span>
+          </a>
+          <!-- <a mat-list-item routerLink="/reports" routerLinkActive="active-link" (click)="closeNavOnMobile()"
+             matTooltip="Audit Reports" [matTooltipDisabled]="!isMinimized" matTooltipPosition="right">
+            <mat-icon>description</mat-icon>
+            <span class="nav-label" *ngIf="!isMinimized">Reports</span>
+          </a> -->
+        </div>
+      </div>
+      
+      <!-- Analytics Section -->
+      <div class="nav-group">
+        <div class="nav-group-header" (click)="toggleNavGroup('analytics')" *ngIf="!isMinimized">
+          <span>ANALYTICS</span>
+          <mat-icon>{{ navGroupsExpanded.analytics ? 'expand_less' : 'expand_more' }}</mat-icon>
+        </div>
+        
+        <div [ngClass]="{'nav-group-content': true, 'expanded': navGroupsExpanded.analytics || isMinimized}">
+          <a mat-list-item routerLink="/stats" routerLinkActive="active-link" (click)="closeNavOnMobile()"
+             matTooltip="Statistics" [matTooltipDisabled]="!isMinimized" matTooltipPosition="right">
+            <!-- <mat-icon>bar_chart</mat-icon> -->
+            <span class="nav-label" *ngIf="!isMinimized">Statistics</span>
+          </a>
+        </div>
+      </div>
       
       <!-- Additional Navigation Items -->
       <mat-divider></mat-divider>
-      <a mat-list-item routerLink="/settings" routerLinkActive="active-link" (click)="closeNavOnMobile()">
-        <mat-icon>settings</mat-icon>
-        <span class="nav-label">Settings</span>
+      <a mat-list-item routerLink="/settings" routerLinkActive="active-link" (click)="closeNavOnMobile()"
+         matTooltip="Settings" [matTooltipDisabled]="!isMinimized" matTooltipPosition="right">
+        <!-- <mat-icon>settings</mat-icon> -->
+        <span class="nav-label" *ngIf="!isMinimized">Settings</span>
       </a>
-      <a mat-list-item routerLink="/help" routerLinkActive="active-link" (click)="closeNavOnMobile()">
-        <mat-icon>help</mat-icon>
-        <span class="nav-label">Help & Support</span>
+      <a mat-list-item routerLink="/help" routerLinkActive="active-link" (click)="closeNavOnMobile()"
+         matTooltip="Help & Support" [matTooltipDisabled]="!isMinimized" matTooltipPosition="right">
+        <!-- <mat-icon>help</mat-icon> -->
+        <span class="nav-label" *ngIf="!isMinimized">Help & Support</span>
       </a>
     </mat-nav-list>
     
-    <!-- User Info Section -->
-    <div class="user-info">
-      <mat-icon>account_circle</mat-icon>
-      <div class="user-details">
-        <span class="user-name">JP</span>
+    <!-- Enhanced User Info Section -->
+    <!-- <div class="user-info" [ngClass]="{'minimized': isMinimized}">
+      <div class="user-avatar">
+        <span>JP</span>
+      </div>
+      <div class="user-details" *ngIf="!isMinimized">
+        <span class="user-name">Jayaprakash Shanmugam</span>
         <span class="user-role">Owner</span>
       </div>
-    </div>
+      <button mat-icon-button [matMenuTriggerFor]="profileMenu" class="user-menu-btn" *ngIf="!isMinimized">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #profileMenu="matMenu">
+        <button mat-menu-item routerLink="/profile">
+          <mat-icon>person</mat-icon>
+          <span>Profile</span>
+        </button>
+        <button mat-menu-item routerLink="/preferences">
+          <mat-icon>tune</mat-icon>
+          <span>Preferences</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div> -->
   </mat-sidenav>
   
-  <!-- Main Content -->
+  <!-- Enhanced Main Content Area -->
   <mat-sidenav-content>
-    <!-- Toolbar -->
+    <!-- Enhanced Toolbar with Search and Theme Toggle -->
     <mat-toolbar color="primary" class="main-toolbar">
       <button
         type="button"
@@ -67,53 +125,163 @@
       
       <span class="toolbar-title">{{title}}</span>
       
-      <!-- Toolbar Actions -->
+      <!-- Enhanced Toolbar Actions -->
       <div class="toolbar-spacer"></div>
       
-      <button mat-icon-button aria-label="Search">
-        <mat-icon>search</mat-icon>
+      <!-- Search with Expansion -->
+      <div class="search-container" [ngClass]="{'expanded': searchExpanded}">
+        <mat-form-field appearance="outline" class="search-field" *ngIf="searchExpanded">
+          <input matInput placeholder="Search..." autocomplete="off">
+          <button mat-icon-button matSuffix (click)="toggleSearch()">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+        <button mat-icon-button aria-label="Search" (click)="toggleSearch()" *ngIf="!searchExpanded">
+          <mat-icon>search</mat-icon>
+        </button>
+      </div>
+      
+      <!-- Quick Actions Button -->
+      <button mat-icon-button [matMenuTriggerFor]="actionsMenu" aria-label="Quick actions">
+        <mat-icon>add_circle</mat-icon>
       </button>
       
+      <mat-menu #actionsMenu="matMenu" class="quick-actions-menu">
+        <button mat-menu-item routerLink="/clients/new">
+          <mat-icon>add_business</mat-icon>
+          <span>New Client Audit</span>
+        </button>
+        <button mat-menu-item routerLink="/models/new">
+          <mat-icon>add_circle_outline</mat-icon>
+          <span>New Model Audit</span>
+        </button>
+        <button mat-menu-item routerLink="/reports/new">
+          <mat-icon>post_add</mat-icon>
+          <span>New Report</span>
+        </button>
+      </mat-menu>
+      
+      <!-- Enhanced Notifications -->
       <button mat-icon-button aria-label="Notifications" [matBadge]="notificationCount" 
-              [matBadgeHidden]="notificationCount === 0" matBadgeColor="accent">
+              [matBadgeHidden]="notificationCount === 0" matBadgeColor="accent" 
+              [matMenuTriggerFor]="notificationsMenu">
         <mat-icon>notifications</mat-icon>
       </button>
       
-      <button mat-icon-button [matMenuTriggerFor]="userMenu" aria-label="User menu">
-        <mat-icon>account_circle</mat-icon>
+      <mat-menu #notificationsMenu="matMenu" class="notifications-menu" xPosition="before">
+        <div class="notification-header">
+          <h3>Notifications</h3>
+          <button mat-button color="primary" (click)="markAllAsRead()">Mark all as read</button>
+        </div>
+        <mat-divider></mat-divider>
+        <div class="notification-list">
+          <div class="notification-item unread" *ngFor="let n of notifications">
+            <div class="notification-icon" [ngClass]="n.type">
+              <mat-icon>{{n.icon}}</mat-icon>
+            </div>
+            <div class="notification-content">
+              <div class="notification-title">{{n.title}}</div>
+              <div class="notification-message">{{n.message}}</div>
+              <div class="notification-time">{{n.time}}</div>
+            </div>
+          </div>
+          <div class="view-all-link">
+            <a routerLink="/notifications">View all notifications</a>
+          </div>
+        </div>
+      </mat-menu>
+      
+      <!-- Theme Toggle -->
+      <button mat-icon-button aria-label="Toggle theme" (click)="toggleTheme()">
+        <mat-icon>{{ isDarkTheme ? 'light_mode' : 'dark_mode' }}</mat-icon>
       </button>
       
-      <mat-menu #userMenu="matMenu">
-        <button mat-menu-item routerLink="/profile">
-          <mat-icon>person</mat-icon>
-          <span>Profile</span>
+      <!-- User Menu -->
+      <div class="toolbar-user">
+        <button mat-button [matMenuTriggerFor]="userMenu" class="user-menu-button">
+          <div class="toolbar-avatar">JP</div>
+          <span class="user-name-display" *ngIf="!(isHandset$ | async)">John</span>
+          <mat-icon>arrow_drop_down</mat-icon>
         </button>
-        <button mat-menu-item (click)="logout()">
-          <mat-icon>exit_to_app</mat-icon>
-          <span>Logout</span>
-        </button>
-      </mat-menu>
+        
+        <mat-menu #userMenu="matMenu">
+          <div class="user-menu-header">
+            <div class="user-avatar-large">JP</div>
+            <div class="user-info-large">
+              <div class="user-name-large">John Peters</div>
+              <div class="user-email">john.peters@example.com</div>
+            </div>
+          </div>
+          <mat-divider></mat-divider>
+          <button mat-menu-item routerLink="/profile">
+            <mat-icon>person</mat-icon>
+            <span>My Profile</span>
+          </button>
+          <button mat-menu-item routerLink="/account">
+            <mat-icon>account_circle</mat-icon>
+            <span>Account Settings</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item (click)="logout()">
+            <mat-icon>exit_to_app</mat-icon>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </div>
     </mat-toolbar>
     
-    <!-- Page Content -->
+    <!-- Enhanced Page Content with Breadcrumbs -->
     <div class="content-container">
-      <!-- <div class="breadcrumb">
-        <span *ngFor="let item of breadcrumbs; let last = last">
-          <a *ngIf="!last" [routerLink]="item.url">{{item.label}}</a>
-          <span *ngIf="!last"> / </span>
-          <span *ngIf="last" class="current-page">{{item.label}}</span>
-        </span>
-      </div> -->
+      <!-- Breadcrumbs with Material Design -->
+      <div class="breadcrumb-container" *ngIf="breadcrumbs?.length">
+        <mat-card class="breadcrumb-card">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item">
+                <a routerLink="/">
+                  <mat-icon class="breadcrumb-home">home</mat-icon>
+                </a>
+              </li>
+              <li class="breadcrumb-item" *ngFor="let item of breadcrumbs; let last = last" [class.active]="last">
+                <mat-icon *ngIf="!last" class="breadcrumb-separator">chevron_right</mat-icon>
+                <a *ngIf="!last" [routerLink]="item.url">{{item.label}}</a>
+                <span *ngIf="last" class="current-page">{{item.label}}</span>
+              </li>
+            </ol>
+          </nav>
+        </mat-card>
+      </div>
       
-      <div class="page-content">
-        <router-outlet></router-outlet>
+      <!-- System Status Banner (conditionally shown) -->
+      <div class="system-alert" *ngIf="systemAlert">
+        <mat-icon>info</mat-icon>
+        <div class="alert-message">{{systemAlert.message}}</div>
+        <button mat-icon-button (click)="dismissAlert()">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
+      
+      <!-- Enhanced Page Content -->
+      <div class="page-content" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+        <router-outlet #o="outlet"></router-outlet>
       </div>
     </div>
     
-    <!-- Footer -->
+    <!-- Enhanced Footer -->
     <footer class="app-footer">
-      <div>&copy; 2025 Audit Portal. All rights reserved.</div>
-      <div>Version 2.3.1</div>
+      <div class="footer-content">
+        <div class="footer-section">
+          <span>&copy; 2025 Audit Portal. All rights reserved.</span>
+        </div>
+        <div class="footer-section links">
+          <a href="/terms">Terms</a>
+          <a href="/privacy">Privacy</a>
+          <a href="/help">Help</a>
+        </div>
+        <div class="footer-section">
+          <span>Version 2.3.1</span>
+        </div>
+      </div>
     </footer>
   </mat-sidenav-content>
 </mat-sidenav-container>
